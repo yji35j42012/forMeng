@@ -177,6 +177,83 @@ h2 {
   border-radius: 8px;
 }
 
+.normal_select {
+  overflow: hidden;
+  position: relative;
+  display: block;
+  width: 195px;
+  height: 36px;
+  background: #fff6e9;
+  border: 2px solid #333333;
+  border-radius: 8px;
+}
+
+.normal_select select {
+  width: 100%;
+  height: 100%;
+  padding-left: 14px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: #005f5f;
+  cursor: pointer;
+}
+
+.normal_select i {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  pointer-events: none;
+}
+
+.normal_checkbox {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.normal_checkbox input {
+  display: none;
+}
+
+.normal_checkbox input:checked + span:after {
+  display: block;
+}
+
+.normal_checkbox span {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+  border: 2px solid #005f5f;
+  border-radius: 4px;
+}
+
+.normal_checkbox span::after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  width: 10px;
+  height: 5px;
+  border: 2px solid #005f5f;
+  border-width: 0 0 2px 2px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 .wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -539,5 +616,39 @@ h2 {
   -webkit-box-shadow: 4px 4px 0px #333333;
           box-shadow: 4px 4px 0px #333333;
   border-radius: 20px;
+}
+
+.filter h2 + .normal_select,
+.filter .normal_select + .normal_select,
+.filter .normal_select + .filter_group,
+.filter .filter_group + .filter_group {
+  margin-top: 23px;
+}
+
+.filter_group_title {
+  position: relative;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+}
+
+.filter_group_title::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #005f5f;
+}
+
+.filter_group li {
+  padding: 6px 0;
+}
+
+.filter_group li.filter_group_title {
+  padding: 0 0 6px;
 }
 /*# sourceMappingURL=all.css.map */

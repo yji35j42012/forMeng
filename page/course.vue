@@ -36,6 +36,68 @@
             </div>
             <div class="filter">
                 <h2>條件篩選</h2>
+                <label class="normal_select">
+                    <select>
+                        <option value="">推薦排序</option>
+                    </select>
+                    <i>
+                        <svg
+                            width="17"
+                            height="10"
+                            viewBox="0 0 17 10"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M1.5 1.5L8.5 8.5L15.5 1.5"
+                                stroke="#005F5F"
+                                stroke-width="2.91667"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </i>
+                </label>
+                <label class="normal_select">
+                    <select>
+                        <option value="">選擇課程日期</option>
+                    </select>
+                    <i>
+                        <svg
+                            width="17"
+                            height="10"
+                            viewBox="0 0 17 10"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M1.5 1.5L8.5 8.5L15.5 1.5"
+                                stroke="#005F5F"
+                                stroke-width="2.91667"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </i>
+                </label>
+                <ul class="filter_group">
+                    <li class="filter_group_title">素食分類</li>
+                    <li>
+                        <label class="normal_checkbox">
+                            <input type="checkbox">
+                            <span></span>
+                            全素
+                        </label>
+                        <label class="normal_checkbox">
+                            <input type="checkbox">
+                            <span></span>
+                            蛋素
+                        </label>
+                    </li>
+                </ul>
+                <ul class="filter_group">
+                    <li class="filter_group_title">價格</li>
+                </ul>
             </div>
         </div>
     </div>

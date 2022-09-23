@@ -184,6 +184,63 @@
 			background-color: #000;
 			border-radius: 50%;
 		}
+
+		/* 單選 */
+
+		/* 多選 */
+		.check_box {
+			display: flex;
+			justify-content: center;
+			margin-top: 50px;
+		}
+
+		.normal_checkbox {
+			display: -webkit-inline-box;
+			display: -ms-inline-flexbox;
+			display: inline-flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			cursor: pointer;
+		}
+
+		.normal_checkbox+.normal_checkbox {
+			margin-left: 20px;
+		}
+
+		.normal_checkbox input {
+			display: none;
+		}
+
+		.normal_checkbox input:checked+span:after {
+			display: block;
+		}
+
+		.normal_checkbox span {
+			position: relative;
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			margin-right: 16px;
+			border: 2px solid #005f5f;
+			border-radius: 4px;
+		}
+
+		.normal_checkbox span::after {
+			content: "";
+			display: none;
+			position: absolute;
+			top: 3px;
+			left: 2px;
+			width: 10px;
+			height: 5px;
+			border: 2px solid #005f5f;
+			border-width: 0 0 2px 2px;
+			-webkit-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+		}
+
+		/* 多選 */
 	</style>
 </head>
 
@@ -239,7 +296,7 @@
 				</li>
 			</ul>
 
-			<!-- 性別 -->
+			<!-- 性別 單選-->
 			<div class="gender_box">
 				<label class="gender_radio">
 					<input type="radio" name="gender">
@@ -252,6 +309,22 @@
 					女
 				</label>
 			</div>
+
+
+			<!-- 多選 -->
+			<div class="check_box">
+				<label class="normal_checkbox">
+					<input type="checkbox">
+					<span></span>
+					全素
+				</label>
+				<label class="normal_checkbox">
+					<input type="checkbox">
+					<span></span>
+					蛋素
+				</label>
+			</div>
+
 		</div>
 	</div>
 
