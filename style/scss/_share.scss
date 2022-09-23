@@ -35,6 +35,7 @@ h2 {
     border: 2px solid #333333;
     box-shadow: 4px 4px 0px #333333;
     border-radius: 8px;
+    @extend %hand;
 }
 .normal_select {
     overflow: hidden;
@@ -99,6 +100,38 @@ h2 {
         }
     }
 }
+
+.normal_page {
+    @include d_f(flex, center, center);
+    margin-top: 48px;
+    li {
+        @include d_f(flex, center, center);
+        width: 36px;
+        height: 36px;
+        background-color: #005f5f;
+        color: #fff6e9;
+        @extend %hand;
+        &:first-child {
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+        &:last-child {
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+    }
+}
+.icon_keep {
+    display: block;
+    width: 22px;
+    height: 29px;
+    fill: transparent;
+    @extend %hand;
+    &.on {
+        fill: #005f5f;
+    }
+}
+//
 .wrap {
     @include d_f(flex);
     flex-direction: column;
@@ -131,6 +164,7 @@ h2 {
     width: 100%;
     padding: 48px 120px 0;
     transform: translate3d(0, 0, 0);
+    z-index: 1;
     @include mw(M) {
         width: 100%;
         height: 61px;
@@ -256,7 +290,7 @@ h2 {
     }
 }
 .infoBody {
-    @include d_f(flex);
+    @include d_f(flex, center);
 }
 .card {
     @include d_f(flex);
@@ -265,7 +299,13 @@ h2 {
     border: 2px solid #333333;
     box-shadow: 4px 4px 0px #333333;
     border-radius: 20px;
-
+    @include mw(M) {
+        flex-direction: column;
+        max-width: 700px;
+    }
+    & + & {
+        margin-top: 48px;
+    }
     // .card_pic
     &_pic {
         flex: none;
@@ -273,6 +313,11 @@ h2 {
         width: 422px;
         margin-right: 48px;
         border-radius: 20px;
+        @include mw(M) {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 32px;
+        }
     }
     // .card_txt
     &_txt {
@@ -291,6 +336,19 @@ h2 {
                 padding-bottom: 24px;
                 margin-bottom: 24px;
                 border-bottom: 1px solid #333;
+            }
+        }
+
+        // .card_txt .icon_keep
+        .icon_keep {
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            @include mw(M) {
+                flex: none;
+                position: relative;
+                margin-left: 24px;
             }
         }
     }
@@ -322,15 +380,25 @@ h2 {
     // .card_fun
     &_fun {
         @include d_f(flex, flex-end, center);
+        margin-top: 24px;
+
+        .normal_btn {
+            @include mw(M) {
+                width: 100%;
+            }
+        }
     }
 }
 .filter {
+    margin-left: 28px;
     padding: 35px;
     background: #fff6e9;
     border: 2px solid #333333;
     box-shadow: 4px 4px 0px #333333;
     border-radius: 20px;
-
+    @include mw(M) {
+        display: none;
+    }
     h2 + .normal_select,
     .normal_select + .normal_select,
     .normal_select + .filter_group,
@@ -340,9 +408,10 @@ h2 {
     // .filter_group
     &_group {
         // .filter_group_title
+        @include d_f(flex, center, none);
+        flex-direction: column;
         &_title {
             position: relative;
-
             // border-bottom: 2px solid #005f5f;
             font-style: normal;
             font-weight: 700;
