@@ -15,6 +15,7 @@ module.exports = {
     mounted() {
         // console.log(store.state.nowPage);
     },
+    
     computed: {},
     methods: {},
 };

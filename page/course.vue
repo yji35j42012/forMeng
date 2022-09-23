@@ -42,82 +42,87 @@
                     <li>3</li>
                 </ul>
             </div>
-            <div class="filter">
-                <h2>條件篩選</h2>
-                <label class="normal_select">
-                    <select>
-                        <option value="">推薦排序</option>
-                    </select>
-                    <i v-html="icon_all.select_arr"></i>
-                </label>
-                <label class="normal_select">
-                    <select>
-                        <option value="">選擇課程日期</option>
-                    </select>
-                    <i v-html="icon_all.select_arr"></i>
-                </label>
-                <ul class="filter_group">
-                    <li class="filter_group_title">素食分類</li>
-                    <li>
-                        <label class="normal_checkbox">
-                            <input type="checkbox" />
-                            <span></span>
-                            全素
-                        </label>
-                    </li>
-                    <li>
-                        <label class="normal_checkbox">
-                            <input type="checkbox" />
-                            <span></span>
-                            蛋素
-                        </label>
-                    </li>
-                    <li>
-                        <label class="normal_checkbox">
-                            <input type="checkbox" />
-                            <span></span>
-                            五辛素
-                        </label>
-                    </li>
-                    <li>
-                        <label class="normal_checkbox">
-                            <input type="checkbox" />
-                            <span></span>
-                            奶素
-                        </label>
-                    </li>
-                    <li>
-                        <label class="normal_checkbox">
-                            <input type="checkbox" />
-                            <span></span>
-                            蛋奶素
-                        </label>
-                    </li>
-                </ul>
-                <ul class="filter_group">
-                    <li class="filter_group_title">價格</li>
-                    <li>
-                        <label class="normal_checkbox">
-                            <input type="checkbox" />
-                            <span></span>
-                            $800 以下
-                        </label>
-                    </li>
-                    <li>
-                        <label class="normal_checkbox">
-                            <input type="checkbox" />
-                            <span></span>
-                            $800 ~ $1500
-                        </label>
-                    </li>
-                    <li>
-                        <label class="normal_checkbox">
-                            <input type="checkbox" />
-                            <span></span>
-                            $1500 以上
-                        </label>
-                    </li>
-                </ul>
+            <div class="filter" @click="filterHnadler">
+                <button class="filter_btn">
+                    <i v-html="icon_all.filter"></i>
+                </button>
+                <div id="filter_box" class="filter_box">
+                    <h2>條件篩選</h2>
+                    <label class="normal_select">
+                        <select>
+                            <option value="">推薦排序</option>
+                        </select>
+                        <i v-html="icon_all.select_arr"></i>
+                    </label>
+                    <label class="normal_select">
+                        <select>
+                            <option value="">選擇課程日期</option>
+                        </select>
+                        <i v-html="icon_all.select_arr"></i>
+                    </label>
+                    <ul class="filter_group">
+                        <li class="filter_group_title">素食分類</li>
+                        <li>
+                            <label class="normal_checkbox">
+                                <input type="checkbox" />
+                                <span></span>
+                                全素
+                            </label>
+                        </li>
+                        <li>
+                            <label class="normal_checkbox">
+                                <input type="checkbox" />
+                                <span></span>
+                                蛋素
+                            </label>
+                        </li>
+                        <li>
+                            <label class="normal_checkbox">
+                                <input type="checkbox" />
+                                <span></span>
+                                五辛素
+                            </label>
+                        </li>
+                        <li>
+                            <label class="normal_checkbox">
+                                <input type="checkbox" />
+                                <span></span>
+                                奶素
+                            </label>
+                        </li>
+                        <li>
+                            <label class="normal_checkbox">
+                                <input type="checkbox" />
+                                <span></span>
+                                蛋奶素
+                            </label>
+                        </li>
+                    </ul>
+                    <ul class="filter_group">
+                        <li class="filter_group_title">價格</li>
+                        <li>
+                            <label class="normal_checkbox">
+                                <input type="checkbox" />
+                                <span></span>
+                                $800 以下
+                            </label>
+                        </li>
+                        <li>
+                            <label class="normal_checkbox">
+                                <input type="checkbox" />
+                                <span></span>
+                                $800 ~ $1500
+                            </label>
+                        </li>
+                        <li>
+                            <label class="normal_checkbox">
+                                <input type="checkbox" />
+                                <span></span>
+                                $1500 以上
+                            </label>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -135,6 +140,15 @@ module.exports = {
         // console.log(store.state.nowPage);
     },
     computed: {},
-    methods: {},
+    methods: {
+        filterHnadler() {
+            var filter_box = document.querySelector("#filter_box");
+            if (filter_box.classList.contains("on")) {
+                filter_box.classList.remove("on");
+            } else {
+                filter_box.classList.add("on");
+            }
+        },
+    },
 };
 </script>

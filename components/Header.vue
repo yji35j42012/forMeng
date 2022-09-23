@@ -8,10 +8,10 @@
                 <img class="logo_ph" src="./images/logo_ph.png" alt="" />
             </h1>
         </div>
-        <button class="menu_btn" @click="menuHandler">
+        <button id="menu_btn" class="menu_btn" @click="menuHandler">
             <span></span>
         </button>
-        <ul id="menu" class="menu">
+        <ul class="menu">
             <li class="menu_item">
                 <router-link to="/">首頁</router-link>
             </li>
@@ -41,13 +41,19 @@ module.exports = {
         // console.log(store.state.nowPage);
     },
     computed: {},
+    watch: {
+        $route(to, from) {
+            var menu = document.querySelector("#menu");
+            menu.classList.remove("on");
+        },
+    },
     methods: {
         menuHandler() {
-            var menu = document.querySelector("#menu");
-            if (menu.classList.contains("on")) {
-                menu.classList.remove("on");
+            var menu_btn = document.querySelector("#menu_btn");
+            if (menu_btn.classList.contains("on")) {
+                menu_btn.classList.remove("on");
             } else {
-                menu.classList.add("on");
+                menu_btn.classList.add("on");
             }
         },
     },
