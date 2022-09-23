@@ -45,9 +45,14 @@ html,
 body {
 	width: 100%;
 	height: 100%;
-	background-color: #ffffff;
+	// background-color: #ffffff;
 	color: #262626;
 	font-family: "Abhaya Libre", sans-serif;
+
+	background: url("../../images/bg.png"), #6dd0cd;
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat;
 }
 
 /* 
