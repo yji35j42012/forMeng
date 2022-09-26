@@ -51,6 +51,7 @@ h2 {
     background: #fff6e9;
     border: 2px solid #333333;
     border-radius: 8px;
+
     select {
         width: 100%;
         height: 100%;
@@ -59,7 +60,7 @@ h2 {
         font-size: 14px;
         letter-spacing: 0.1em;
         color: #005f5f;
-        cursor: pointer;
+        @extend %hand;
     }
     i {
         position: absolute;
@@ -71,9 +72,9 @@ h2 {
         pointer-events: none;
     }
 }
-
 .normal_checkbox {
     @include d_f(inline-flex, none, center);
+    @extend %hand;
     input {
         display: none;
         &:checked + span:after {
@@ -105,7 +106,6 @@ h2 {
         }
     }
 }
-
 .normal_page {
     @include d_f(flex, center, center);
     margin-top: 48px;
@@ -131,6 +131,25 @@ h2 {
         }
     }
 }
+
+.msg_left {
+    &::before {
+        content: attr(data-txt);
+    }
+}
+.msg_right {
+    &::after {
+        content: attr(data-txt);
+    }
+}
+
+.boxShadow {
+    padding: 24px;
+    background-color: #fff6e9;
+    border: 2px solid #333333;
+    box-shadow: 4px 4px 0px #333333;
+    border-radius: 20px;
+}
 .icon_keep {
     display: block;
     width: 22px;
@@ -150,10 +169,8 @@ h2 {
 }
 .content {
     flex: 0 1 100%;
-    padding-top: 48px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 48px;
+    padding: 48px 20px 48px;
+
     @include mw(M) {
         padding-top: 129px;
     }
@@ -165,7 +182,6 @@ h2 {
     height: 100%;
     margin: auto;
 }
-
 .header {
     flex: none;
     position: fixed;
@@ -175,12 +191,17 @@ h2 {
     padding: 48px 120px 0;
     transform: translate3d(0, 0, 0);
     z-index: 1;
+    pointer-events: none;
+    @include mw(XXL) {
+        padding: 48px 20px 0;
+    }
     @include mw(M) {
         width: 100%;
         height: 61px;
         background-color: #005f5f;
         padding: 0 0 0 12px;
         box-shadow: 4px 4px 0 #333;
+        pointer-events: auto;
         // filter: drop-shadow(4px 4px 0px #333333);
     }
     .logo_pc {
@@ -199,8 +220,10 @@ h2 {
 .menu {
     overflow: hidden;
     width: 150px;
+    background-color: #005f5f;
     border: 3px solid #fff6e9;
     border-radius: 200px;
+    pointer-events: auto;
     @extend %transition;
     @include mw(M) {
         position: absolute;
@@ -277,7 +300,6 @@ h2 {
         }
     }
 }
-
 .footer {
     flex: none;
     @include d_f(flex, center, center);
@@ -286,7 +308,6 @@ h2 {
     background-color: #005f5f;
     color: #fff6e9;
 }
-
 .infoHead {
     @include d_f(flex, center, center);
     @include mw(M) {
@@ -321,11 +342,6 @@ h2 {
 }
 .card {
     @include d_f(flex);
-    padding: 24px;
-    background: #fff6e9;
-    border: 2px solid #333333;
-    box-shadow: 4px 4px 0px #333333;
-    border-radius: 20px;
     @include mw(M) {
         flex-direction: column;
     }
@@ -416,6 +432,7 @@ h2 {
     }
 }
 .filter {
+    margin-left: 28px;
     @include mw(M) {
         position: relative;
         align-self: flex-end;
@@ -443,12 +460,8 @@ h2 {
     }
     // .filter_box
     &_box {
-        margin-left: 28px;
         padding: 35px;
         background: #fff6e9;
-        border: 2px solid #333333;
-        box-shadow: 4px 4px 0px #333333;
-        border-radius: 20px;
         @include mw(M) {
             display: none;
             position: absolute;
@@ -492,6 +505,100 @@ h2 {
             &.filter_group_title {
                 padding: 0 0 6px;
             }
+        }
+    }
+}
+.more {
+    width: 100%;
+    // .more_titlePic
+    &_titlePic {
+        overflow: hidden;
+        border-radius: 20px;
+    }
+    // .more_info
+    &_info {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 160%;
+        letter-spacing: 0.1em;
+        color: #333333;
+    }
+    // .more_infoPic
+    &_infoPic {
+        @include d_f(flex);
+        li {
+            width: 50%;
+        }
+        li + li {
+            margin-left: 16px;
+        }
+    }
+    // .more_note
+    &_note {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 160%;
+        letter-spacing: 0.1em;
+        color: #000000;
+    }
+    > * + * {
+        margin-top: 16px;
+    }
+}
+
+.car {
+    margin-left: 28px;
+    text-align: center;
+    @include mw(M) {
+        @include d_f(flex);
+        flex-direction: column-reverse;
+		margin-left: 0;
+		margin-bottom: 48px;
+    }
+    // .car_title
+    &_title {
+        @include d_f(flex, center);
+        margin-bottom: 24px;
+        color: #005f5f;
+        white-space: nowrap;
+        .icon_keep {
+            margin-left: 24px;
+        }
+    }
+    // .car_pic
+    &_pic {
+        width: 100%;
+        max-width: 150px;
+        margin: 0 auto 24px;
+    }
+    .normal_select {
+        margin-bottom: 24px;
+    }
+    // .car_num
+    &_num {
+        @include d_f(flex, space-between, center);
+        margin-bottom: 24px;
+        li {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.2em;
+            &:first-child {
+                color: #333333;
+            }
+            &:last-child {
+                color: #005f5f;
+            }
+        }
+    }
+    // .car_titlePic
+    &_titlePic {
+        width: 100%;
+        max-width: 238px;
+        margin: 32px auto 0;
+        @include mw(M) {
+            margin-top: 0;
+            margin-bottom: 32px;
         }
     }
 }

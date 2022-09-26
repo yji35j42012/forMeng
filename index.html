@@ -35,6 +35,10 @@
 			{
 				path: '/course',
 				component: httpVueLoader("./page/course.vue"),
+			},
+			{
+				path: '/course/:id',
+				component: httpVueLoader("./page/course_more.vue"),
 			}
 		]
 		const router = new VueRouter({

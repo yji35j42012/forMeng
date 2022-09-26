@@ -10,7 +10,7 @@
         </div>
         <div class="infoBody">
             <div class="card_group">
-                <div class="card" v-for="item in 2" :key="item">
+                <div class="card boxShadow" v-for="item in 2" :key="item">
                     <div class="card_pic">
                         <img src="../images/course/course001-1.jpg" alt="" />
                     </div>
@@ -31,7 +31,12 @@
                             </li>
                         </ul>
                         <div class="card_fun">
-                            <button class="normal_btn">了解更多</button>
+                            <button
+                                class="normal_btn"
+                                @click="courseMore('123')"
+                            >
+                                了解更多
+                            </button>
                             <i class="icon_keep" v-html="icon_all.keep"></i>
                         </div>
                     </div>
@@ -42,11 +47,11 @@
                     <li>3</li>
                 </ul>
             </div>
-            <div class="filter" @click="filterHnadler">
-                <button class="filter_btn">
+            <div class="filter">
+                <button class="filter_btn" @click="filterHnadler">
                     <i v-html="icon_all.filter"></i>
                 </button>
-                <div id="filter_box" class="filter_box">
+                <div id="filter_box" class="filter_box boxShadow">
                     <h2>條件篩選</h2>
                     <label class="normal_select">
                         <select>
@@ -148,6 +153,9 @@ module.exports = {
             } else {
                 filter_box.classList.add("on");
             }
+        },
+        courseMore(id) {
+            this.$router.push("/course/" + id);
         },
     },
 };

@@ -44,7 +44,9 @@ module.exports = {
     watch: {
         $route(to, from) {
             var menu = document.querySelector("#menu");
-            menu.classList.remove("on");
+            if (menu_btn.classList.contains("on")) {
+                menu.classList.remove("on");
+            }
         },
     },
     methods: {
