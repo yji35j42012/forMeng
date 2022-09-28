@@ -715,12 +715,6 @@ h2 {
             @include mw(M) {
                 flex-direction: column;
                 align-items: flex-start;
-
-                .normal_btn {
-                    position: absolute;
-                    top: 10px;
-                    right: 16px;
-                }
                 .icon_keep {
                     position: absolute;
                     bottom: 10px;
@@ -752,6 +746,19 @@ h2 {
                 color: #333333;
                 * + * {
                     margin-top: 16px;
+                }
+            }
+            .normal_btn {
+                &::before {
+                    content: attr(data-txt);
+                }
+                @include mw(M) {
+                    position: absolute;
+                    top: 10px;
+					right: 16px;
+					&::before {
+						content:'';
+					}
                 }
             }
         }

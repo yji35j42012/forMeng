@@ -28,7 +28,7 @@
                         <div>價格</div>
                         <div>$1,200</div>
                     </div>
-                    <button class="normal_btn">取消品項</button>
+                    <button class="normal_btn" data-txt="取消品項"></button>
                     <i class="icon_keep" v-html="icon_all.keep"></i>
                 </div>
             </div>
