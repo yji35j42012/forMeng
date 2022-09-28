@@ -175,31 +175,59 @@ h2 {
         }
         @include mw(M) {
             @include d_f(flex, center, center);
-            width: 50px;
-            height: 50px;
+            flex-direction: column;
+
+            // width: 50px;
+            // height: 50px;
         }
-        &::before {
-            content: "STEP " counter(section) ".";
+        span {
             @include mw(M) {
-                content: counter(section);
+                @include d_f(flex, center, center);
+                width: 50px;
+                height: 50px;
+                margin-bottom: 12px;
+                background-color: #fff;
+                color: #005f5f;
+                font-weight: 700;
+                font-size: 32px;
+                border-radius: 50%;
+                border: 2px solid #333333;
+                box-shadow: 4px 4px 0px #333333;
+            }
+            &::before {
+                content: "STEP " counter(section) ".";
+                @include mw(M) {
+                    content: counter(section);
+                }
             }
         }
         &.msg_right::after {
             @include mw(M) {
-                content: "";
+                color: #333333;
+                font-size: 14px;
             }
         }
-
+        // .step_item.boxShadow
         &.boxShadow {
             padding: 12px 30px;
             @include mw(M) {
                 padding: 0;
                 border-radius: 50%;
+                border: none;
+                box-shadow: none;
+                background-color: transparent;
             }
         }
         &.on {
             background-color: #005f5f;
             color: #fff6e9;
+            @include mw(M) {
+                background-color: transparent;
+                span {
+                    background-color: #005f5f;
+                    color: #fff6e9;
+                }
+            }
         }
     }
 }
@@ -639,7 +667,7 @@ h2 {
         @include d_f(flex);
         flex-direction: column-reverse;
         margin-left: 0;
-        margin-bottom: 48px;
+        // margin-bottom: 48px;
     }
     // .car_title
     &_title {
@@ -706,12 +734,27 @@ h2 {
             width: 281px;
             margin-right: 48px;
             border-radius: 10px;
+            @include mw(M) {
+                width: 220px;
+                margin-right: 24px;
+            }
+            @include mw(XS) {
+                width: 100px;
+                height: 100px;
+                img {
+                    width: auto;
+                    height: 100%;
+                }
+            }
         }
         // .car_item_info
         &_info {
             @include d_f(flex, space-around, center);
             width: 100%;
             text-align: left;
+            .icon_close {
+                display: none;
+            }
             @include mw(M) {
                 flex-direction: column;
                 align-items: flex-start;
@@ -724,6 +767,9 @@ h2 {
             h2 {
                 display: inline-block;
                 border-bottom: 1px solid #000;
+                @include mw(M) {
+                    border: none;
+                }
             }
             .detail {
                 // .detail_date
@@ -734,8 +780,17 @@ h2 {
                     letter-spacing: 0.08em;
                     color: #333333;
                 }
+
                 * + * {
                     margin-top: 16px;
+                    @include mw(XS) {
+                        margin-top: 7px;
+                    }
+                }
+                @include mw(XS) {
+                    &_time {
+                        display: none;
+                    }
                 }
             }
             .price {
@@ -746,19 +801,33 @@ h2 {
                 color: #333333;
                 * + * {
                     margin-top: 16px;
+                    @include mw(XS) {
+                        margin-top: 0;
+                    }
+                }
+                @include mw(M) {
+                    margin-top: 16px;
+                }
+                @include mw(XS) {
+                    margin-top: 26px;
+                    &_txt {
+                        display: none;
+                    }
                 }
             }
-            .normal_btn {
-                &::before {
-                    content: attr(data-txt);
-                }
+            .cancel {
+                @extend %hand;
                 @include mw(M) {
                     position: absolute;
                     top: 10px;
-					right: 16px;
-					&::before {
-						content:'';
-					}
+                    right: 16px;
+
+                    .normal_btn {
+                        display: none;
+                    }
+                    .icon_close {
+                        display: block;
+                    }
                 }
             }
         }
@@ -769,6 +838,9 @@ h2 {
         position: relative;
         margin-top: 48px;
         text-align: right;
+        @include mw(XS) {
+            text-align: center;
+        }
         &::before {
             content: "";
             position: absolute;
@@ -779,6 +851,9 @@ h2 {
             height: 2px;
             margin: auto;
             background-color: #000;
+            @include mw(XS) {
+                display: none;
+            }
         }
     }
     // .car_func
@@ -787,6 +862,65 @@ h2 {
 
         .normal_btn + .normal_btn {
             margin-left: 16px;
+        }
+    }
+    // .car_subscriber
+    &_subscriber {
+        margin-top: 48px;
+        // .car_subscriber_list
+        .boxShadow {
+            padding: 0;
+        }
+        &_list {
+            overflow: hidden;
+            @include d_f(flex);
+            & + & {
+                margin-top: 48px;
+            }
+            .title {
+                @include d_f(flex, center, center);
+                width: 35%;
+                // width: 400px;
+                background-color: #005f5f;
+                color: #ffffff;
+                border: 1px solid #333333;
+                font-weight: 700;
+                font-size: 24px;
+                letter-spacing: 0.15em;
+            }
+            .info {
+                width: 65%;
+                padding: 66px 0;
+                // .info_ul
+                &_ul {
+                    // @include d_f(flex);
+                }
+                // .info_li
+                &_li {
+                    @include d_f(flex, center);
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 16px;
+                    letter-spacing: 0.15em;
+                    color: #000000;
+
+                    input {
+                        margin-left: 24px;
+                        padding: 12px 0;
+                        font-size: 16px;
+                        line-height: 16px;
+                        border-bottom: 1px solid #7d7d7d;
+                    }
+                }
+                .msg_left {
+                    &:before {
+                        display: block;
+                        width: 80px;
+                        padding: 12px 0;
+                        text-align: right;
+                    }
+                }
+            }
         }
     }
 }

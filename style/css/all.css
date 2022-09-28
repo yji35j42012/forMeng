@@ -144,7 +144,7 @@ select {
           transition-duration: 0.3s;
 }
 
-.normal_btn, .normal_select select, .normal_checkbox, .normal_page li, .icon_keep, .menu_item i, .menu_btn, .filter_btn {
+.normal_btn, .normal_select select, .normal_checkbox, .normal_page li, .icon_keep, .menu_item i, .menu_btn, .filter_btn, .car_item_info .cancel {
   cursor: pointer;
 }
 
@@ -400,24 +400,52 @@ h2 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 50px;
-    height: 50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
-.step_item::before {
+@media screen and (max-width: 995px) {
+  .step_item span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 12px;
+    background-color: #fff;
+    color: #005f5f;
+    font-weight: 700;
+    font-size: 32px;
+    border-radius: 50%;
+    border: 2px solid #333333;
+    -webkit-box-shadow: 4px 4px 0px #333333;
+            box-shadow: 4px 4px 0px #333333;
+  }
+}
+
+.step_item span::before {
   content: "STEP " counter(section) ".";
 }
 
 @media screen and (max-width: 995px) {
-  .step_item::before {
+  .step_item span::before {
     content: counter(section);
   }
 }
 
 @media screen and (max-width: 995px) {
   .step_item.msg_right::after {
-    content: "";
+    color: #333333;
+    font-size: 14px;
   }
 }
 
@@ -429,12 +457,26 @@ h2 {
   .step_item.boxShadow {
     padding: 0;
     border-radius: 50%;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background-color: transparent;
   }
 }
 
 .step_item.on {
   background-color: #005f5f;
   color: #fff6e9;
+}
+
+@media screen and (max-width: 995px) {
+  .step_item.on {
+    background-color: transparent;
+  }
+  .step_item.on span {
+    background-color: #005f5f;
+    color: #fff6e9;
+  }
 }
 
 .msg_left::before {
@@ -1108,7 +1150,6 @@ h2 {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     margin-left: 0;
-    margin-bottom: 48px;
   }
 }
 
@@ -1211,6 +1252,24 @@ h2 {
   border-radius: 10px;
 }
 
+@media screen and (max-width: 995px) {
+  .car_item_pic {
+    width: 220px;
+    margin-right: 24px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .car_item_pic {
+    width: 100px;
+    height: 100px;
+  }
+  .car_item_pic img {
+    width: auto;
+    height: 100%;
+  }
+}
+
 .car_item_info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1222,6 +1281,10 @@ h2 {
           align-items: center;
   width: 100%;
   text-align: left;
+}
+
+.car_item_info .icon_close {
+  display: none;
 }
 
 @media screen and (max-width: 995px) {
@@ -1246,6 +1309,12 @@ h2 {
   border-bottom: 1px solid #000;
 }
 
+@media screen and (max-width: 995px) {
+  .car_item_info h2 {
+    border: none;
+  }
+}
+
 .car_item_info .detail_date {
   font-weight: 500;
   font-size: 14px;
@@ -1256,6 +1325,18 @@ h2 {
 
 .car_item_info .detail * + * {
   margin-top: 16px;
+}
+
+@media screen and (max-width: 599px) {
+  .car_item_info .detail * + * {
+    margin-top: 7px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .car_item_info .detail_time {
+    display: none;
+  }
 }
 
 .car_item_info .price {
@@ -1270,18 +1351,38 @@ h2 {
   margin-top: 16px;
 }
 
-.car_item_info .normal_btn::before {
-  content: attr(data-txt);
+@media screen and (max-width: 599px) {
+  .car_item_info .price * + * {
+    margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 995px) {
-  .car_item_info .normal_btn {
+  .car_item_info .price {
+    margin-top: 16px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .car_item_info .price {
+    margin-top: 26px;
+  }
+  .car_item_info .price_txt {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .car_item_info .cancel {
     position: absolute;
     top: 10px;
     right: 16px;
   }
-  .car_item_info .normal_btn::before {
-    content: '';
+  .car_item_info .cancel .normal_btn {
+    display: none;
+  }
+  .car_item_info .cancel .icon_close {
+    display: block;
   }
 }
 
@@ -1289,6 +1390,12 @@ h2 {
   position: relative;
   margin-top: 48px;
   text-align: right;
+}
+
+@media screen and (max-width: 599px) {
+  .car_total {
+    text-align: center;
+  }
 }
 
 .car_total::before {
@@ -1303,11 +1410,98 @@ h2 {
   background-color: #000;
 }
 
+@media screen and (max-width: 599px) {
+  .car_total::before {
+    display: none;
+  }
+}
+
 .car_func {
   margin-top: 48px;
 }
 
 .car_func .normal_btn + .normal_btn {
   margin-left: 16px;
+}
+
+.car_subscriber {
+  margin-top: 48px;
+}
+
+.car_subscriber .boxShadow {
+  padding: 0;
+}
+
+.car_subscriber_list {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.car_subscriber_list + .car_subscriber_list {
+  margin-top: 48px;
+}
+
+.car_subscriber_list .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 35%;
+  background-color: #005f5f;
+  color: #ffffff;
+  border: 1px solid #333333;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0.15em;
+}
+
+.car_subscriber_list .info {
+  width: 65%;
+  padding: 66px 0;
+}
+
+.car_subscriber_list .info_li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.15em;
+  color: #000000;
+}
+
+.car_subscriber_list .info_li input {
+  margin-left: 24px;
+  padding: 12px 0;
+  font-size: 16px;
+  line-height: 16px;
+  border-bottom: 1px solid #7d7d7d;
+}
+
+.car_subscriber_list .info .msg_left:before {
+  display: block;
+  width: 80px;
+  padding: 12px 0;
+  text-align: right;
 }
 /*# sourceMappingURL=all.css.map */
