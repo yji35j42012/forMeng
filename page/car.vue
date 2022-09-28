@@ -47,25 +47,24 @@
             <div class="car_subscriber_list boxShadow">
                 <div class="title">訂購人</div>
                 <div class="info">
-					<ul class="info_ul">
-						<li class="info_li msg_left" data-txtl="姓名">
-							<input type="text" value="姓名">
-						</li>
-						<li class="info_li msg_left" data-txtl="聯絡電話">
-							<input type="text" value="666777888">
-						</li>
-						<li class="info_li msg_left" data-txtl="Email">
-							<input type="text" value="aaa@gamil.com">
-						</li>
-					</ul>
-				</div>
+                    <ul class="info_ul">
+                        <li class="info_li msg_left" data-txtl="姓名">
+                            <input type="text" value="姓名" />
+                        </li>
+                        <li class="info_li msg_left" data-txtl="聯絡電話">
+                            <input type="text" value="666777888" />
+                        </li>
+                        <li class="info_li msg_left" data-txtl="Email">
+                            <input type="text" value="aaa@gamil.com" />
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="car_subscriber_list boxShadow">
                 <div class="title">付款方式</div>
                 <div class="info"></div>
             </div>
         </div>
-
         <div class="car_func">
             <button class="normal_btn _white">繼續購物</button>
             <button class="normal_btn">確認訂單</button>
