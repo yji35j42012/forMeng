@@ -55,11 +55,11 @@
                     </label>
                     <ul class="car_num">
                         <li>剩餘人數</li>
-                        <li class="msg_right" data-txt="人">10</li>
+                        <li class="msg_right" data-txtr="人">10</li>
                     </ul>
                     <ul class="car_num">
                         <li>課程價格</li>
-                        <li class="msg_left" data-txt="$">1,200</li>
+                        <li class="msg_left" data-txtl="$">1,200</li>
                     </ul>
                     <button class="normal_btn">
                         加入購物車

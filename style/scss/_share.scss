@@ -29,6 +29,7 @@ h2 {
 //     color: #333333;
 // }
 .normal_btn {
+    position: relative;
     padding: 8px 35px;
     background: #005f5f;
     color: #fff6e9;
@@ -40,6 +41,11 @@ h2 {
     @include hoverHandler {
         transform: translate(4px, 4px);
         box-shadow: 0 0 0 transparent;
+    }
+
+    &._white {
+        background-color: #fff6e9;
+        color: #005f5f;
     }
 }
 .normal_select {
@@ -133,36 +139,78 @@ h2 {
 }
 
 .step {
-    @include d_f(flex);
-
+    position: relative;
+    @include d_f(flex, space-between);
+    @include mw(M) {
+        max-width: 400px;
+        margin: auto;
+    }
+    // content: attr(data-txt) counter(section);
     &::before {
         content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
         width: 100%;
         height: 2px;
+        margin: auto;
+        background-color: #000;
+        @include mw(M) {
+            display: none;
+        }
     }
     // .step_item
     &_item {
+        position: relative;
+        font-weight: 700;
         font-size: 32px;
+        color: #005f5f;
         white-space: nowrap;
-        // font-weight: 700;
-        // line-height: 39px;
-        // color: #fff6e9;
-        & + & {
-            margin-left: 48px;
+        counter-increment: section;
+        @include mw(XL) {
+            font-size: 22px;
         }
+        @include mw(L) {
+            font-size: 20px;
+        }
+        @include mw(M) {
+            @include d_f(flex, center, center);
+            width: 50px;
+            height: 50px;
+        }
+        &::before {
+            content: "STEP " counter(section) ".";
+            @include mw(M) {
+                content: counter(section);
+            }
+        }
+        &.msg_right::after {
+            @include mw(M) {
+                content: "";
+            }
+        }
+
         &.boxShadow {
             padding: 12px 30px;
+            @include mw(M) {
+                padding: 0;
+                border-radius: 50%;
+            }
+        }
+        &.on {
+            background-color: #005f5f;
+            color: #fff6e9;
         }
     }
 }
 .msg_left {
     &::before {
-        content: attr(data-txt);
+        content: attr(data-txtl);
     }
 }
 .msg_right {
     &::after {
-        content: attr(data-txt);
+        content: attr(data-txtr);
     }
 }
 
@@ -637,6 +685,101 @@ h2 {
         @include mw(M) {
             margin-top: 0;
             margin-bottom: 32px;
+        }
+    }
+    // .car_group
+    &_group {
+        margin-top: 48px;
+    }
+    // .car_item
+    &_item {
+        position: relative;
+        @include d_f(flex, none, center);
+        padding: 10px 16px;
+        & + & {
+            margin-top: 48px;
+        }
+        // .car_item_pic
+        &_pic {
+            flex: none;
+            overflow: hidden;
+            width: 281px;
+            margin-right: 48px;
+            border-radius: 10px;
+        }
+        // .car_item_info
+        &_info {
+            @include d_f(flex, space-around, center);
+            width: 100%;
+            text-align: left;
+            @include mw(M) {
+                flex-direction: column;
+                align-items: flex-start;
+
+                .normal_btn {
+                    position: absolute;
+                    top: 10px;
+                    right: 16px;
+                }
+                .icon_keep {
+                    position: absolute;
+                    bottom: 10px;
+                    right: 16px;
+                }
+            }
+            h2 {
+                display: inline-block;
+                border-bottom: 1px solid #000;
+            }
+            .detail {
+                // .detail_date
+                &_date {
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 17px;
+                    letter-spacing: 0.08em;
+                    color: #333333;
+                }
+                * + * {
+                    margin-top: 16px;
+                }
+            }
+            .price {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 19px;
+                letter-spacing: 0.08em;
+                color: #333333;
+                * + * {
+                    margin-top: 16px;
+                }
+            }
+        }
+    }
+
+    // .car_total
+    &_total {
+        position: relative;
+        margin-top: 48px;
+        text-align: right;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            margin: auto;
+            background-color: #000;
+        }
+    }
+    // .car_func
+    &_func {
+        margin-top: 48px;
+
+        .normal_btn + .normal_btn {
+            margin-left: 16px;
         }
     }
 }
