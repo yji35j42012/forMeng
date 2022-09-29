@@ -11,7 +11,6 @@ h1 {
         line-height: 58px;
     }
 }
-
 h2 {
     font-style: normal;
     font-weight: 700;
@@ -20,14 +19,6 @@ h2 {
     // letter-spacing: 0.1em;
     color: #333333;
 }
-
-// h3 {
-//     font-style: normal;
-//     font-weight: 700;
-//     font-size: 16px;
-//     line-height: 19px;
-//     color: #333333;
-// }
 .normal_btn {
     position: relative;
     padding: 8px 35px;
@@ -112,6 +103,59 @@ h2 {
         }
     }
 }
+.normal_radio {
+    @include d_f(flex, none, center);
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    & + & {
+    }
+    // .normal_radio span
+    span {
+        position: relative;
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        margin-right: 24px;
+        padding: 5px;
+        border: 1px solid #000;
+        border-radius: 50%;
+    }
+    // .normal_radio input
+    input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        opacity: 0;
+    }
+    input:checked + span:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        border-radius: 50%;
+    }
+    .seven1 {
+        width: 82px;
+    }
+    .seven2 {
+        width: 155px;
+    }
+    .family {
+        width: 86px;
+    }
+    .ok {
+        width: 70px;
+    }
+    .hilife {
+        width: 68px;
+    }
+    img + img {
+        margin-left: 24px;
+    }
+}
 .normal_page {
     @include d_f(flex, center, center);
     margin-top: 48px;
@@ -137,7 +181,6 @@ h2 {
         }
     }
 }
-
 .step {
     position: relative;
     @include d_f(flex, space-between);
@@ -241,7 +284,6 @@ h2 {
         content: attr(data-txtr);
     }
 }
-
 .boxShadow {
     padding: 24px;
     background-color: #fff6e9;
@@ -259,7 +301,6 @@ h2 {
         fill: #005f5f;
     }
 }
-//
 .wrap {
     @include d_f(flex);
     flex-direction: column;
@@ -666,7 +707,6 @@ h2 {
         @include d_f(flex);
         flex-direction: column-reverse;
         margin-left: 0;
-        // margin-bottom: 48px;
     }
     // .car_title
     &_title {
@@ -865,13 +905,16 @@ h2 {
     // .car_subscriber
     &_subscriber {
         margin-top: 48px;
-        // .car_subscriber_list
         .boxShadow {
             padding: 0;
         }
+        // .car_subscriber_list
         &_list {
             overflow: hidden;
             @include d_f(flex);
+            @include mw(S) {
+                flex-direction: column;
+            }
             & + & {
                 margin-top: 48px;
             }
@@ -885,13 +928,26 @@ h2 {
                 font-weight: 700;
                 font-size: 24px;
                 letter-spacing: 0.15em;
+                @include mw(S) {
+                    width: 100%;
+                    height: 50px;
+                }
             }
             .info {
+                @include d_f(flex, center, center);
+                flex-direction: column;
                 width: 65%;
-                padding: 66px 0;
+                height: 250px;
+                @include mw(S) {
+                    width: 100%;
+                    height: auto;
+                    padding: 24px 25px;
+                }
                 // .info_ul
                 &_ul {
-                    // @include d_f(flex);
+                    @include mw(S) {
+                        width: 100%;
+                    }
                 }
                 // .info_li
                 &_li {
@@ -901,13 +957,26 @@ h2 {
                     line-height: 16px;
                     letter-spacing: 0.15em;
                     color: #000000;
-
+                    @include mw(S) {
+                        flex-direction: column;
+                        &:not(:first-child) {
+                            margin-top: 12px;
+                        }
+                    }
                     input {
                         margin-left: 24px;
                         padding: 12px 0;
                         font-size: 16px;
                         line-height: 16px;
                         border-bottom: 1px solid #7d7d7d;
+                        @include mw(S) {
+                            margin-left: 0;
+                        }
+                    }
+                }
+                &._pay {
+                    li + li {
+                        margin-top: 32px;
                     }
                 }
                 .msg_left {
@@ -916,9 +985,200 @@ h2 {
                         width: 80px;
                         padding: 12px 0;
                         text-align: right;
+                        @include mw(S) {
+                            padding: 0;
+                            text-align: left;
+                        }
                     }
                 }
             }
+        }
+    }
+}
+.pay {
+    margin-top: 48px;
+    // .pay_title
+    &_title {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+        color: #005f5f;
+    }
+    // .pay_box
+    &_box {
+        margin-top: 48px;
+        padding: 48px 20px;
+        @include mw(S) {
+            padding: 24px 20px;
+        }
+        &._atm {
+            padding: 0;
+        }
+        // .pay_box_title
+        &_title {
+            // margin-bottom: 12px;
+            font-weight: 600;
+            font-size: 20px;
+            color: #000000;
+            text-align: left;
+            ._store & {
+                font-weight: 600;
+                font-size: 20px;
+                color: #333333;
+                text-align: center;
+            }
+            & + .pay_box_ul,
+            & + .pay_box_info {
+                margin-top: 12px;
+            }
+            & + .pay_box_radio {
+                margin-top: 48px;
+            }
+        }
+        // .pay_box_ul
+        &_ul {
+            @include d_f(flex, space-between, center);
+
+            & + .pay_box_title {
+                margin-top: 24px;
+            }
+        }
+        // .pay_box_info
+        &_info {
+            @include d_f(flex, none, center);
+            .normal_select {
+                max-width: 111px;
+                margin-bottom: 0;
+                @include mw(S) {
+                    width: 100%;
+                    max-width: none;
+                }
+            }
+            .normal_select + span,
+            span + .normal_select {
+                margin-left: 23px;
+                @include mw(S) {
+                    margin-left: 12px;
+                }
+            }
+            .msg_right:after {
+                right: 100%;
+            }
+            & + .pay_box_title {
+                margin-top: 24px;
+            }
+        }
+        // .pay_box_pic
+        &_pic {
+            max-width: 445px;
+            margin: 48px auto 0;
+        }
+        // .pay_box_tb
+        &_tb {
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+            .title {
+                padding: 12px 12px 12px 32px;
+                font-weight: 600;
+                font-size: 20px;
+                color: #000000;
+                text-align: left;
+                border-bottom: 1px solid #333333;
+                @include mw(S) {
+                    padding: 12px;
+                }
+            }
+            th {
+                padding: 12px 32px;
+                white-space: nowrap;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+                color: #000000;
+                border-right: 1px solid #333333;
+                @include mw(S) {
+                    padding: 12px;
+                }
+            }
+            td {
+                padding: 12px 32px;
+                text-align: left;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+                color: #000000;
+                @include mw(S) {
+                    padding: 12px;
+                }
+            }
+            .limit_itme {
+                @include mw(S) {
+                    th {
+                        vertical-align: top;
+                    }
+                    .normal_btn {
+                        margin-top: 12px;
+                    }
+                }
+            }
+        }
+        // .pay_box_note
+        &_note {
+            margin-top: 48px;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.1em;
+            color: #333333;
+            text-align: left;
+        }
+        // .pay_box_radio
+        &_radio {
+            @include d_f(inline-flex, center);
+            flex-wrap: wrap;
+
+            @include mw(S) {
+                flex-direction: column;
+            }
+            .title {
+                width: 100%;
+                margin-bottom: 16px;
+                text-align: left;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+                color: #000000;
+            }
+            .normal_radio + .normal_radio {
+                margin-left: 33px;
+                @include mw(S) {
+                    margin-left: 0;
+                    margin-top: 43px;
+                }
+            }
+        }
+        .credit_input {
+            width: 100%;
+            max-width: 140px;
+            height: 48px;
+            padding: 0 10px;
+            background: #fffcf7;
+            border: 1px solid #333333;
+            border-radius: 8px;
+            font-size: 20px;
+            text-align: center;
+        }
+        &._credit .pay_box_title,
+        &._credit .pay_box_ul,
+        &._credit .pay_box_info,
+        &._store .pay_box_title,
+        &._store .pay_box_radio,
+        &._store .pay_box_note {
+            max-width: 660px;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }

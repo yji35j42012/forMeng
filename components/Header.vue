@@ -27,7 +27,7 @@
             <li class="menu_item">
                 <router-link to="/">相關文章</router-link>
             </li>
-            <li class="menu_item">                
+            <li class="menu_item">
                 <router-link to="/car">
                     <i class="icon_car" v-html="icon_all.car"></i>
                 </router-link>
