@@ -11,7 +11,7 @@
 
 <body>
 	<div id="app" class="wrap">
-		<htitle></htitle>
+		<htitle style="display: none"></htitle>
 		<div :class="['content' , nowPage]">
 			<router-view></router-view>
 		</div>
@@ -45,8 +45,12 @@
 				component: httpVueLoader("./page/car.vue"),
 			},
 			{
-				path: '/solarterms',
-				component: httpVueLoader("./page/solarterms.vue"),
+				path: '/recipe',
+				component: httpVueLoader("./page/recipe.vue"),
+			},
+			{
+				path: '/recipe/:id',
+				component: httpVueLoader("./page/recipe_more.vue"),
 			},
 
 		]
