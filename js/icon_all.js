@@ -17,16 +17,15 @@ var icon_all = {
     </clipPath>
     </defs>
     </svg>`,
-    member:`<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+    member: `<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M23.3334 24.5V22.1667C23.3334 20.929 22.8417 19.742 21.9666 18.8668C21.0914 17.9917 19.9044 17.5 18.6667 17.5H9.33341C8.09574 17.5 6.90875 17.9917 6.03358 18.8668C5.15841 19.742 4.66675 20.929 4.66675 22.1667V24.5" stroke="#FFF6E9" stroke-width="2.91667" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M13.9999 12.8333C16.5772 12.8333 18.6666 10.744 18.6666 8.16667C18.6666 5.58934 16.5772 3.5 13.9999 3.5C11.4226 3.5 9.33325 5.58934 9.33325 8.16667C9.33325 10.744 11.4226 12.8333 13.9999 12.8333Z" stroke="#FFF6E9" stroke-width="2.91667" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    `,
-    close:`<svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+    </svg>`,
+    close: `<svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M21 7.90137L7 21.9014" stroke="#333333" stroke-width="2.91667" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M7 7.90137L21 21.9014" stroke="#333333" stroke-width="2.91667" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    
-    `,
-
+    </svg>`,
+    search: `<svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.796 12.9707L11.8749 10.0496C11.743 9.91772 11.5643 9.84447 11.3768 9.84447H10.8992C11.7079 8.81021 12.1884 7.50934 12.1884 6.0942C12.1884 2.72774 9.46065 0 6.0942 0C2.72774 0 0 2.72774 0 6.0942C0 9.46065 2.72774 12.1884 6.0942 12.1884C7.50934 12.1884 8.81021 11.7079 9.84447 10.8992V11.3768C9.84447 11.5643 9.91772 11.743 10.0496 11.8749L12.9707 14.796C13.2461 15.0714 13.6914 15.0714 13.9639 14.796L14.7931 13.9668C15.0685 13.6914 15.0685 13.2461 14.796 12.9707ZM6.0942 9.84447C4.02276 9.84447 2.34392 8.16857 2.34392 6.0942C2.34392 4.02276 4.01982 2.34392 6.0942 2.34392C8.16564 2.34392 9.84447 4.01983 9.84447 6.0942C9.84447 8.16564 8.16857 9.84447 6.0942 9.84447Z" fill="#FFF6E9"/>
+</svg>`,
 };

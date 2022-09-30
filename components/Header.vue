@@ -19,7 +19,7 @@
                 <router-link to="/course">廚藝教室</router-link>
             </li>
             <li class="menu_item">
-                <router-link to="/">節氣食補</router-link>
+                <router-link to="/solarterms">節氣食補</router-link>
             </li>
             <li class="menu_item">
                 <router-link to="/">素食地圖</router-link>

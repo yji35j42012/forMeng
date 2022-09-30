@@ -144,7 +144,7 @@ select {
           transition-duration: 0.3s;
 }
 
-.normal_btn, .normal_select select, .normal_checkbox, .normal_page li, .icon_keep, .menu_item i, .menu_btn, .filter_btn, .car_item_info .cancel {
+.normal_btn, .normal_search_btn, .normal_select select, .normal_checkbox, .normal_page li, .icon_keep, .menu_item i, .menu_btn, .filter_btn, .car_item_info .cancel {
   cursor: pointer;
 }
 
@@ -155,6 +155,7 @@ h1 {
   font-size: 64px;
   line-height: 77px;
   color: #005f5f;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 995px) {
@@ -162,6 +163,10 @@ h1 {
     font-size: 48px;
     line-height: 58px;
   }
+}
+
+h1 + .car {
+  margin-top: 32px;
 }
 
 h2 {
@@ -204,6 +209,38 @@ h2 {
 .normal_btn._white {
   background-color: #fff6e9;
   color: #005f5f;
+}
+
+.normal_search {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 200px;
+  height: 40px;
+  background: #fff6e9;
+  border: 2px solid #333333;
+  border-radius: 5px;
+}
+
+.normal_search_btn {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 40px;
+  height: 40px;
+  background-color: #005f5f;
+}
+
+.normal_search input {
+  width: 100%;
+  height: 100%;
+  padding: 0 12px;
+}
+
+.normal_search + .normal_select {
+  margin-left: 30px;
 }
 
 .normal_select {
@@ -622,9 +659,6 @@ h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100%;
   padding: 48px 120px 0;
   -webkit-transform: translate3d(0, 0, 0);
@@ -641,6 +675,9 @@ h2 {
 
 @media screen and (max-width: 995px) {
   .header {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     height: 61px;
     background-color: #005f5f;
@@ -863,12 +900,74 @@ h2 {
   margin-left: 49px;
 }
 
+.solarterms .infoHead_pic {
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(830px - 32px);
+          flex: 0 0 calc(830px - 32px);
+  margin-left: 32px;
+}
+
+@media screen and (max-width: 995px) {
+  .solarterms .infoHead_pic {
+    margin-left: 0;
+    margin-top: 48px;
+  }
+}
+
 @media screen and (max-width: 995px) {
   .infoHead_pic {
     width: 208px;
     margin-left: 0;
     margin-bottom: 32px;
   }
+}
+
+.infoHead_filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.infoHead_filter .normal_select {
+  max-width: 150px;
+}
+
+.infoHead_filter .normal_select + .normal_select {
+  margin-left: 12px;
+}
+
+.solarterms .infoHead {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+}
+
+@media screen and (max-width: 995px) {
+  .solarterms .infoHead {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.solarterms .infoHead .car {
+  max-width: 280px;
+  margin-left: 0;
+}
+
+.solarterms .infoHead .car_box {
+  padding: 32px 24px;
+}
+
+.solarterms .infoHead .car_title {
+  white-space: unset;
 }
 
 .course .infoHead {
