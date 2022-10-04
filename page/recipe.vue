@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="infoHead_pic">
-                <img src="../images/solarterms.png" alt="" />
+                <img src="../images/recipe.png" alt="" />
             </div>
             <div class="infoHead_filter">
                 <div class="normal_search">
@@ -56,10 +56,7 @@
             <div class="card_group">
                 <div class="card boxShadow" v-for="item in 2" :key="item">
                     <div class="card_pic">
-                        <img
-                            src="../images/solarterms/solarterms1.jpg"
-                            alt=""
-                        />
+                        <img src="../images/recipe/recipe1.jpg" alt="" />
                     </div>
                     <div class="card_txt">
                         <h2 data-txtby="by 史萊姆">

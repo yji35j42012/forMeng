@@ -2095,6 +2095,86 @@ h2 {
   width: 100%;
 }
 
+.recipe_more {
+  padding: 36px 75px;
+}
+
+.recipe_more_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 32px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: #333333;
+}
+
+.recipe_more_pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin-bottom: 36px;
+}
+
+.recipe_more_pic .menu {
+  width: 100%;
+}
+
+.recipe_more_pic .season {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 150px;
+          flex: 0 0 150px;
+  margin-left: 30px;
+}
+
+.recipe_more_info li {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 160%;
+}
+
+.recipe_more_info li + li {
+  margin-top: 20px;
+}
+
+.recipe_detail {
+  margin-top: 48px;
+  padding: 36px 75px;
+}
+
+.recipe_detail_ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  width: 100%;
+  text-align: center;
+}
+
+.recipe_detail_ul li:not(.ingredients) {
+  width: 50%;
+}
+
 .recipe .infoHead {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
