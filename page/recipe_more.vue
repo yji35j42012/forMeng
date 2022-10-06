@@ -8,7 +8,7 @@
                 <i class="icon_keep" v-html="icon_all.keep"></i>
             </div>
             <div class="recipe_more_pic">
-                <div class="menu">
+                <div class="main">
                     <img src="../images/recipe/recipe1.jpg" alt="" />
                 </div>
                 <div class="season">
@@ -24,19 +24,36 @@
         </div>
         <div class="recipe_detail boxShadow">
             <ul class="recipe_detail_ul">
+                <li>份量 <br />3 人份</li>
+                <li>時間<br />10 分鐘</li>
+                <li class="ingredients">食材</li>
                 <li>
-                    <div class="size">
-                        份量 <br />
-                        3 人份
-                    </div>
+                    <span>甜豌豆/荷蘭豆</span>
+                    <span>一包</span>
                 </li>
                 <li>
-                    時間<br />
-                    10 分鐘
+                    <span>乾木耳/鮮木耳</span>
+                    <span>3片</span>
+                </li>
+                <li>
+                    <span>香菇素蠔油</span>
+                    <span>½茶匙</span>
+                </li>
+                <li>
+                    <span>香菇粉</span>
+                    <span>少許</span>
+                </li>
+                <li>
+                    <span>太白粉</span>
+                    <span>¾茶匙</span>
                 </li>
             </ul>
         </div>
-        <div class="recipe_list"></div>
+        <div class="recipe_list boxShadow">
+            <ul class="recipe_detail_ul">
+                <li></li>
+            </ul>
+        </div>
         <div class="recipe_message"></div>
     </div>
 </template>

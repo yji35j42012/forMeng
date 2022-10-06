@@ -1,144 +1,173 @@
 .recipe {
-	.card_txt {
-		@include d_f(flex);
-		flex-wrap: wrap;
+    .card_txt {
+        @include d_f(flex);
+        flex-wrap: wrap;
 
-		h2 {
-			position: relative;
-			@include d_f(flex, space-between, center);
-			width: 100%;
-			margin-bottom: 54px;
-			padding-right: 46px;
-			@include mw(M) {
-				align-items: flex-start;
-				flex-direction: column;
-				margin-bottom: 16px;
-				padding-right: 0;
-			}
-			&:after {
-				content: attr(data-txtby);
-				position: absolute;
-				bottom: -16px;
-				font-weight: 500;
-				font-size: 14px;
-				line-height: 160%;
-				letter-spacing: 0.1em;
-				color: #808080;
-				transform: translateY(100%);
+        h2 {
+            position: relative;
+            @include d_f(flex, space-between, center);
+            width: 100%;
+            margin-bottom: 54px;
+            padding-right: 46px;
+            @include mw(M) {
+                align-items: flex-start;
+                flex-direction: column;
+                margin-bottom: 16px;
+                padding-right: 0;
+            }
+            &:after {
+                content: attr(data-txtby);
+                position: absolute;
+                bottom: -16px;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 160%;
+                letter-spacing: 0.1em;
+                color: #808080;
+                transform: translateY(100%);
 
-				@include mw(M) {
-					position: relative;
-					bottom: 0;
-					margin-top: 16px;
-					transform: translateY(0);
-				}
-			}
-		}
-	}
-	.card_fun {
-		width: 100%;
-	}
+                @include mw(M) {
+                    position: relative;
+                    bottom: 0;
+                    margin-top: 16px;
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+    .card_fun {
+        width: 100%;
+    }
 
-	// .recipe_more
-	&_more {
-		padding: 36px 75px;
-		// .recipe_more_title
-		&_title {
-			@include d_f(flex, space-between, center);
-			margin-bottom: 32px;
-			font-weight: 700;
-			font-size: 30px;
-			line-height: 36px;
-			color: #333333;
-		}
-		// .recipe_more_pic
-		&_pic {
-			@include d_f(flex);
-			margin-bottom: 36px;
-			.menu {
-				width: 100%;
-			}
-			.season {
-				flex: 0 0 150px;
-				margin-left: 30px;
-			}
-		}
-		// .recipe_more_info
-		&_info {
-			li {
-				font-family: "Inter";
-				font-style: normal;
-				font-weight: 600;
-				font-size: 20px;
-				line-height: 160%;
-			}
-			li + li {
-				margin-top: 20px;
-			}
-		}
-	}
-	// .recipe_detail
-	&_detail {
-		margin-top: 48px;
-		padding: 36px 75px;
-		// .recipe_detail_ul
-		&_ul {
-			@include d_f(flex);
-			width: 100%;
-			text-align: center;
-			li:not(.ingredients) {
-				width: 50%;
-			}
-		}
-	}
-	// .recipe .infoHead
-	.infoHead {
-		flex-wrap: wrap;
-		margin-bottom: 50px;
-		text-align: center;
-		@include mw(M) {
-			flex-direction: column;
-			margin-bottom: 48px;
-		}
-		&_pic {
-			width: 100%;
-			max-width: calc(830px - 32px);
-			margin-left: 32px;
-			@include mw(XL) {
-				max-width: 650px;
-				margin-left: 20px;
-			}
-			@include mw(M) {
-				margin-left: 0;
-				margin-top: 48px;
-			}
-		}
-	}
+    // .recipe_more
+    &_more {
+        padding: 36px 75px;
+        // .recipe_more_title
+        &_title {
+            @include d_f(flex, space-between, center);
+            margin-bottom: 32px;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 36px;
+            color: #333333;
+        }
+        // .recipe_more_pic
+        &_pic {
+            @include d_f(flex);
+            margin-bottom: 36px;
+            .main {
+                width: 100%;
+            }
+            .season {
+                flex: 0 0 150px;
+                margin-left: 30px;
+            }
+        }
+        // .recipe_more_info
+        &_info {
+            li {
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 160%;
+            }
+            li + li {
+                margin-top: 20px;
+            }
+        }
+    }
+    // .recipe_detail
+    &_detail {
+        margin-top: 48px;
+        padding: 36px 75px;
+        // .recipe_detail_ul
+        &_ul {
+            @include d_f(flex);
+            flex-wrap: wrap;
+            width: 100%;
+            text-align: center;
+            li {
+                width: 100%;
+                text-align: left;
+                padding: 13px 0;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 160%;
+                color: #333333;
+                &:not(.ingredients) {
+                    width: 50%;
+                    text-align: center;
+                }
+                &.ingredients ~ li {
+                    @include d_f(flex, space-between);
 
-	.car {
-		max-width: 280px;
-		margin-left: 0;
+                    &:nth-child(odd) {
+                        padding-left: 45px;
+                    }
+                    &:nth-child(even) {
+                        padding-right: 45px;
+                    }
+                }
+                &:nth-child(1),
+                &:nth-child(2),
+                &:nth-child(3) {
+                    border-bottom: 1px solid #333333;
+                }
+                &:nth-child(2) {
+                    border-left: 1px solid #333333;
+                }
+            }
+        }
+    }
+    // .recipe .infoHead
+    .infoHead {
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+        text-align: center;
+        @include mw(M) {
+            flex-direction: column;
+            margin-bottom: 48px;
+        }
+        &_pic {
+            width: 100%;
+            max-width: calc(830px - 32px);
+            margin-left: 32px;
+            @include mw(XL) {
+                max-width: 650px;
+                margin-left: 20px;
+            }
+            @include mw(M) {
+                margin-left: 0;
+                margin-top: 48px;
+            }
+        }
+    }
 
-		&_box {
-			padding: 32px 24px;
-			@include mw(M) {
-				@include d_f(flex, none, center);
-				padding: 16px;
-			}
-		}
-		&_pic {
-			@include mw(M) {
-				flex: none;
-				width: 100px;
-				margin-bottom: 0;
-			}
-		}
-		&_title {
-			white-space: unset;
-			@include mw(M) {
-				margin-bottom: 0;
-				margin-left: 16px;
-			}
-		}
-	}
+    .car {
+        max-width: 280px;
+        margin-left: 0;
+
+        &_box {
+            padding: 32px 24px;
+            @include mw(M) {
+                @include d_f(flex, none, center);
+                padding: 16px;
+            }
+        }
+        &_pic {
+            @include mw(M) {
+                flex: none;
+                width: 100px;
+                margin-bottom: 0;
+            }
+        }
+        &_title {
+            white-space: unset;
+            @include mw(M) {
+                margin-bottom: 0;
+                margin-left: 16px;
+            }
+        }
+    }
 }
