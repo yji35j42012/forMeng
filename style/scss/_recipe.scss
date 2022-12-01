@@ -119,6 +119,10 @@
                 }
             }
         }
+
+        & + .recipe_list {
+            margin-top: 48px;
+        }
     }
     // .recipe .infoHead
     .infoHead {
@@ -141,6 +145,106 @@
                 margin-left: 0;
                 margin-top: 48px;
             }
+        }
+    }
+
+    // .recipe_list
+    &_list {
+        &.boxShadow {
+            padding: 24px 75px;
+        }
+        // recipe_list_li
+        &_li {
+            @include d_f(flex);
+            padding: 36px 0;
+            counter-increment: section;
+            & + & {
+                border-top: 1px solid #333333;
+            }
+        }
+        // recipe_list_img
+        &_img {
+            max-width: 450px;
+            margin-right: 32px;
+        }
+        // .recipe_list_txt
+        &_txt {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #333333;
+
+            &::before {
+                content: attr(data-txt) counter(section);
+                display: block;
+                margin-bottom: 16px;
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 36px;
+            }
+        }
+        & + .recipe_message {
+            margin-top: 48px;
+        }
+    }
+
+    // .recipe_message
+    &_message {
+        @include d_f(flex);
+        flex-wrap: wrap;
+        &.boxShadow {
+            padding: 36px 75px;
+        }
+        //.recipe_message_title
+        &_title {
+            width: 100%;
+            padding-left: 32px;
+            padding-bottom: 16px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            border-bottom: 1px solid #333333;
+        }
+        // .recipe_message_img
+        &_img {
+            @include d_f(flex, center, center);
+            flex: none;
+            width: 100px;
+            height: 100px;
+            margin-top: 36px;
+            margin-right: 44px;
+            background: #eeeeee;
+            border-radius: 50%;
+        }
+        //.recipe_message_txt{
+        &_txt {
+            flex: 0 0 calc(100% - 100px - 44px);
+            margin-top: 36px;
+            background-color: #fffcf7;
+            border: 1px solid #333333;
+
+            textarea {
+                width: 100%;
+                padding: 24px;
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+                color: #333333;
+            }
+        }
+        //.recipe_message_btnBox
+        &_btnBox {
+            width: 100%;
+            margin-top: 32px;
+            text-align: right;
         }
     }
 

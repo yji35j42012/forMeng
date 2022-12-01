@@ -2216,6 +2216,10 @@ h2 {
   border-left: 1px solid #333333;
 }
 
+.recipe_detail + .recipe_list {
+  margin-top: 48px;
+}
+
 .recipe .infoHead {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -2251,6 +2255,134 @@ h2 {
     margin-left: 0;
     margin-top: 48px;
   }
+}
+
+.recipe_list.boxShadow {
+  padding: 24px 75px;
+}
+
+.recipe_list_li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding: 36px 0;
+  counter-increment: section;
+}
+
+.recipe_list_li + .recipe_list_li {
+  border-top: 1px solid #333333;
+}
+
+.recipe_list_img {
+  max-width: 450px;
+  margin-right: 32px;
+}
+
+.recipe_list_txt {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #333333;
+}
+
+.recipe_list_txt::before {
+  content: attr(data-txt) counter(section);
+  display: block;
+  margin-bottom: 16px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.recipe_list + .recipe_message {
+  margin-top: 48px;
+}
+
+.recipe_message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.recipe_message.boxShadow {
+  padding: 36px 75px;
+}
+
+.recipe_message_title {
+  width: 100%;
+  padding-left: 32px;
+  padding-bottom: 16px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  border-bottom: 1px solid #333333;
+}
+
+.recipe_message_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 100px;
+  height: 100px;
+  margin-top: 36px;
+  margin-right: 44px;
+  background: #eeeeee;
+  border-radius: 50%;
+}
+
+.recipe_message_txt {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% - 100px - 44px);
+          flex: 0 0 calc(100% - 100px - 44px);
+  margin-top: 36px;
+  background-color: #fffcf7;
+  border: 1px solid #333333;
+}
+
+.recipe_message_txt textarea {
+  width: 100%;
+  padding: 24px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+}
+
+.recipe_message_btnBox {
+  width: 100%;
+  margin-top: 32px;
+  text-align: right;
 }
 
 .recipe .car {

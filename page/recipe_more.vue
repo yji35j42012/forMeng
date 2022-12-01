@@ -50,11 +50,33 @@
             </ul>
         </div>
         <div class="recipe_list boxShadow">
-            <ul class="recipe_detail_ul">
-                <li></li>
+            <ul class="recipe_list_ul">
+                <li class="recipe_list_li">
+                    <div class="recipe_list_img">
+                        <img src="../images/recipe/recipe1_1.jpg" alt="" />
+                    </div>
+                    <div class="recipe_list_txt">甜豆剝去纖維</div>
+                </li>
+                <li class="recipe_list_li">
+                    <div class="recipe_list_img">
+                        <img src="../images/recipe/recipe1_2.jpg" alt="" />
+                    </div>
+                    <div class="recipe_list_txt">木耳泡發後切小塊</div>
+                </li>
             </ul>
         </div>
-        <div class="recipe_message"></div>
+        <div class="recipe_message boxShadow">
+            <div class="recipe_message_title">留言</div>
+            <div class="recipe_message_img">
+                <i class="icon_img" v-html="icon_all.img"></i>
+            </div>
+            <div class="recipe_message_txt">
+                <textarea name="" id="" cols="30" rows="13"></textarea>
+            </div>
+            <div class="recipe_message_btnBox">
+                <button class="normal_btn">發表留言</button>
+            </div>
+        </div>
     </div>
 </template>
 
