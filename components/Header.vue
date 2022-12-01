@@ -24,7 +24,7 @@
                 <router-link to="/recipe">節氣食補</router-link>
             </li>
             <li class="menu_item">
-                <router-link to="/">素食地圖</router-link>
+                <router-link to="/map">素食地圖</router-link>
             </li>
             <li class="menu_item">
                 <router-link to="/">相關文章</router-link>
