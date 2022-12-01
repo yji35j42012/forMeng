@@ -42,6 +42,12 @@
     // .recipe_more
     &_more {
         padding: 36px 75px;
+        @include mw(M) {
+            padding: 24px 20px;
+        }
+        @include mw(S) {
+            padding: 24px 15px;
+        }
         // .recipe_more_title
         &_title {
             @include d_f(flex, space-between, center);
@@ -50,17 +56,31 @@
             font-size: 30px;
             line-height: 36px;
             color: #333333;
+            @include mw(S) {
+                display: block;
+                margin-bottom: 24px;
+                .icon_keep {
+                    margin-top: 33px;
+                }
+            }
         }
         // .recipe_more_pic
         &_pic {
             @include d_f(flex);
             margin-bottom: 36px;
+            @include mw(S) {
+                display: block;
+            }
             .main {
                 width: 100%;
             }
             .season {
                 flex: 0 0 150px;
                 margin-left: 30px;
+                @include mw(S) {
+                    max-width: 150px;
+                    margin: 24px auto;
+                }
             }
         }
         // .recipe_more_info
@@ -81,12 +101,21 @@
     &_detail {
         margin-top: 48px;
         padding: 36px 75px;
+        @include mw(M) {
+            padding: 24px 20px;
+        }
+        @include mw(S) {
+            padding: 24px 15px;
+        }
         // .recipe_detail_ul
         &_ul {
             @include d_f(flex);
             flex-wrap: wrap;
             width: 100%;
             text-align: center;
+            @include mw(S) {
+                display: block;
+            }
             li {
                 width: 100%;
                 text-align: left;
@@ -95,18 +124,35 @@
                 font-size: 20px;
                 line-height: 160%;
                 color: #333333;
+                @include mw(S) {
+                    padding: 10px 0;
+                }
                 &:not(.ingredients) {
                     width: 50%;
                     text-align: center;
+                    &::before {
+                        content: attr(data-txt);
+                        display: block;
+                    }
+                    @include mw(S) {
+                        @include d_f(flex, space-between);
+                        width: 100%;
+                    }
                 }
                 &.ingredients ~ li {
                     @include d_f(flex, space-between);
 
                     &:nth-child(odd) {
                         padding-left: 45px;
+                        @include mw(S) {
+                            padding-left: 0;
+                        }
                     }
                     &:nth-child(even) {
                         padding-right: 45px;
+                        @include mw(S) {
+                            padding-right: 0;
+                        }
                     }
                 }
                 &:nth-child(1),
@@ -116,6 +162,9 @@
                 }
                 &:nth-child(2) {
                     border-left: 1px solid #333333;
+                    @include mw(S) {
+                        border-left: none;
+                    }
                 }
             }
         }
@@ -152,12 +201,21 @@
     &_list {
         &.boxShadow {
             padding: 24px 75px;
+            @include mw(M) {
+                padding: 24px 20px;
+            }
+            @include mw(S) {
+                padding: 24px 15px;
+            }
         }
         // recipe_list_li
         &_li {
             @include d_f(flex);
             padding: 36px 0;
             counter-increment: section;
+            @include mw(S) {
+                display: block;
+            }
             & + & {
                 border-top: 1px solid #333333;
             }
@@ -166,6 +224,10 @@
         &_img {
             max-width: 450px;
             margin-right: 32px;
+            @include mw(S) {
+                max-width: unset;
+                margin-right: 0;
+            }
         }
         // .recipe_list_txt
         &_txt {
@@ -175,7 +237,9 @@
             font-size: 24px;
             line-height: 29px;
             color: #333333;
-
+            @include mw(S) {
+                margin-top: 24px;
+            }
             &::before {
                 content: attr(data-txt) counter(section);
                 display: block;
@@ -198,6 +262,12 @@
         flex-wrap: wrap;
         &.boxShadow {
             padding: 36px 75px;
+            @include mw(M) {
+                padding: 24px 20px;
+            }
+            @include mw(S) {
+                padding: 24px 15px;
+            }
         }
         //.recipe_message_title
         &_title {
@@ -210,6 +280,9 @@
             font-size: 24px;
             line-height: 29px;
             border-bottom: 1px solid #333333;
+            @include mw(S) {
+                padding-left: 0;
+            }
         }
         // .recipe_message_img
         &_img {
@@ -221,6 +294,9 @@
             margin-right: 44px;
             background: #eeeeee;
             border-radius: 50%;
+            @include mw(S) {
+                margin: 24px auto 0;
+            }
         }
         //.recipe_message_txt{
         &_txt {
@@ -228,7 +304,11 @@
             margin-top: 36px;
             background-color: #fffcf7;
             border: 1px solid #333333;
-
+            @include mw(S) {
+                flex: 0 0 100%;
+                margin-top: 32px;
+                border-radius: 8px;
+            }
             textarea {
                 width: 100%;
                 padding: 24px;
@@ -245,6 +325,9 @@
             width: 100%;
             margin-top: 32px;
             text-align: right;
+            @include mw(S) {
+                text-align: center;
+            }
         }
     }
 

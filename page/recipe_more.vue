@@ -24,27 +24,22 @@
         </div>
         <div class="recipe_detail boxShadow">
             <ul class="recipe_detail_ul">
-                <li>份量 <br />3 人份</li>
-                <li>時間<br />10 分鐘</li>
+                <li data-txt="份量">3 人份</li>
+                <li data-txt="時間">10 分鐘</li>
                 <li class="ingredients">食材</li>
-                <li>
-                    <span>甜豌豆/荷蘭豆</span>
+                <li data-txt="甜豌豆/荷蘭豆">
                     <span>一包</span>
                 </li>
-                <li>
-                    <span>乾木耳/鮮木耳</span>
+                <li data-txt="乾木耳/鮮木耳">
                     <span>3片</span>
                 </li>
-                <li>
-                    <span>香菇素蠔油</span>
+                <li data-txt="香菇素蠔油">
                     <span>½茶匙</span>
                 </li>
-                <li>
-                    <span>香菇粉</span>
+                <li data-txt="香菇粉">
                     <span>少許</span>
                 </li>
-                <li>
-                    <span>太白粉</span>
+                <li data-txt="太白粉">
                     <span>¾茶匙</span>
                 </li>
             </ul>
