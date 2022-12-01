@@ -27,7 +27,7 @@
                 <router-link to="/map">素食地圖</router-link>
             </li>
             <li class="menu_item">
-                <router-link to="/">相關文章</router-link>
+                <router-link to="/article">相關文章</router-link>
             </li>
             <li class="menu_item">
                 <router-link to="/car">

@@ -503,7 +503,7 @@ h2 {
 .infoHead {
     @include d_f(flex, center, center);
     @include mw(M) {
-		flex-direction: column-reverse;
+        flex-direction: column-reverse;
     }
     // .infoHead_pic
     &_pic {
@@ -514,14 +514,42 @@ h2 {
             width: 208px;
             margin-left: 0;
             margin-bottom: 32px;
-		}
-		
-		@at-root .map &{
-			margin-left: 0;
-			@include mw(S){
-				order: -1;
-			}
-		}
+        }
+        & + .infoHead_tab {
+            margin-top: 48px;
+        }
+        @at-root .map & {
+            margin-left: 0;
+            @include mw(S) {
+                order: -1;
+            }
+        }
+        @at-root .article & {
+            margin-left: 0;
+            @include mw(S) {
+                order: -1;
+            }
+        }
+    }
+    // .infoHead_tab
+    &_tab {
+        @include d_f(flex, center);
+        width: 100%;
+        // .infoHead_tab_li
+        &_li {
+            .normal_btn {
+                font-weight: 700;
+                font-size: 32px;
+            }
+
+            &:not(.on) > .normal_btn {
+                background-color: #fff6e9;
+                color: #005f5f;
+            }
+            & + & {
+                margin-left: calc(100% * 0.2);
+            }
+        }
     }
     // .infoHead_filter
     &_filter {
@@ -596,13 +624,13 @@ h2 {
         overflow: hidden;
         width: 422px;
         margin-right: 48px;
-		border-radius: 20px;
-		// .map .card_pic
+        border-radius: 20px;
+        // .map .card_pic
         @at-root .map & {
-			width: 387px;
-			@include mw(M) {
-				width: 100%;
-			}
+            width: 387px;
+            @include mw(M) {
+                width: 100%;
+            }
         }
         @include mw(M) {
             width: 100%;
@@ -614,6 +642,10 @@ h2 {
     &_txt {
         position: relative;
         width: 100%;
+        @at-root .article & ,.recipe &{
+            @include d_f(flex);
+            flex-wrap: wrap;
+        }
         h2 {
             margin-bottom: 24px;
             .icon_clock {
@@ -629,6 +661,37 @@ h2 {
                 @include mw(M) {
                     order: 2;
                     margin-top: 16px;
+                }
+            }
+            @at-root .article & ,.recipe &{
+                position: relative;
+                @include d_f(flex, space-between, center);
+                width: 100%;
+                margin-bottom: 54px;
+                padding-right: 46px;
+                @include mw(M) {
+                    align-items: flex-start;
+                    flex-direction: column;
+                    margin-bottom: 16px;
+                    padding-right: 0;
+                }
+                &:after {
+                    content: attr(data-txtby);
+                    position: absolute;
+                    bottom: -16px;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 160%;
+                    letter-spacing: 0.1em;
+                    color: #808080;
+                    transform: translateY(100%);
+
+                    @include mw(M) {
+                        position: relative;
+                        bottom: 0;
+                        margin-top: 16px;
+                        transform: translateY(0);
+                    }
                 }
             }
         }
@@ -648,10 +711,10 @@ h2 {
         // .card_txt_ul
         &_ul {
             > li + li {
-				margin-top: 23px;
-				@include mw(M) {
-					margin-top: 16px;
-				}
+                margin-top: 23px;
+                @include mw(M) {
+                    margin-top: 16px;
+                }
             }
         }
         // .card_txt .icon_keep
@@ -663,7 +726,7 @@ h2 {
             @include mw(M) {
                 flex: none;
                 position: relative;
-				margin-left: 24px;
+                margin-left: 24px;
             }
         }
     }
@@ -700,6 +763,11 @@ h2 {
             @include mw(M) {
                 width: 100%;
             }
+        }
+
+        @at-root .article &,
+            .recipe & {
+            width: 100%;
         }
     }
 }
@@ -1302,20 +1370,20 @@ h2 {
 }
 
 .sort {
-	@include d_f(inline-flex);
-	align-items: center;
-	color: #005f5f;
-	@include mw(M) {
-		width: 100%;
-		margin-bottom: 16px;
-	}
+    @include d_f(inline-flex);
+    align-items: center;
+    color: #005f5f;
+    @include mw(M) {
+        width: 100%;
+        margin-bottom: 16px;
+    }
     // .sort_li
     &_li {
-		padding: 4px;
+        padding: 4px;
         border: 2px solid #005f5f;
-		border-radius: 5px;
-		&+&{
-			margin-left: 12px;
-		}
+        border-radius: 5px;
+        & + & {
+            margin-left: 12px;
+        }
     }
 }
