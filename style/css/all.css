@@ -2880,4 +2880,10 @@ h2 {
   height: 13px;
   margin-right: 7px;
 }
+
+.admNav .admNav_pic {
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+}
 /*# sourceMappingURL=all.css.map */

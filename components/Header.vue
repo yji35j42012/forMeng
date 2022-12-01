@@ -33,7 +33,7 @@
                 <router-link to="/car">
                     <i class="icon_car" v-html="icon_all.car"></i>
                 </router-link>
-                <router-link to="/">
+                <router-link to="/adm">
                     <i class="icon_member" v-html="icon_all.member"></i>
                 </router-link>
             </li>
