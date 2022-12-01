@@ -3,7 +3,7 @@
 <template>
     <div class="container">
         <div class="infoHead">
-            <h1 style="display:none;">素食地圖</h1>
+            <h1>素食地圖</h1>
             <div class="infoHead_pic">
                 <img src="../images/map/map_title.png" alt="" />
             </div>

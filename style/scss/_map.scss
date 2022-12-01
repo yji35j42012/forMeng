@@ -3,12 +3,37 @@
     .infoHead {
         flex-wrap: wrap;
         margin-bottom: 50px;
+        @include mw(M) {
+            flex-direction: column;
+        }
+        h1{
+            display: none;
+            @include mw(S) {
+                display: block;
+            }
+        }
+        // .infoHead_filter
+        &_filter{
+            @include mw(S) {
+                flex-direction: column;
+            }
+        }
         .normal_select + .normal_select {
             margin-left: 100px;
+            @include mw(S) {
+                margin-left: 0;
+                margin-top: 50px;
+            }
         }
         .normal_select {
             max-width: 195px;
-
+            @include mw(S) {
+                width: 60%;
+                max-width: unset;
+            }
+            @include mw(XS) {
+                width: 100%;
+            }
             &:not(:last-child)::after {
                 content: "";
                 position: absolute;
@@ -23,6 +48,9 @@
                 border-style: solid;
                 border-width: 9px 0 9px 18px;
                 border-color: transparent transparent transparent #005f5f;
+                @include mw(S) {
+                    display: none;
+                }
             }
         }
         .msg_top {
@@ -43,8 +71,17 @@
     }
     .card_txt {
         padding: 18px 0;
+        @include mw(M) {
+            padding: 0;
+        }
     }
     .card_func {
-        @include d_f(flex, space-between);
+        @include d_f(flex, space-between, center);
+        flex-wrap: wrap;
+    }
+    @include mw(M) {
+        .normal_btn {
+            width: calc(100% - 46px);
+        }
     }
 }

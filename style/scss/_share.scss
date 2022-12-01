@@ -503,10 +503,7 @@ h2 {
 .infoHead {
     @include d_f(flex, center, center);
     @include mw(M) {
-        flex-direction: column-reverse;
-    }
-    h1[style="display: none;"] + .infoHead_pic {
-        margin-left: 0;
+		flex-direction: column-reverse;
     }
     // .infoHead_pic
     &_pic {
@@ -517,7 +514,14 @@ h2 {
             width: 208px;
             margin-left: 0;
             margin-bottom: 32px;
-        }
+		}
+		
+		@at-root .map &{
+			margin-left: 0;
+			@include mw(S){
+				order: -1;
+			}
+		}
     }
     // .infoHead_filter
     &_filter {
@@ -592,9 +596,13 @@ h2 {
         overflow: hidden;
         width: 422px;
         margin-right: 48px;
-        border-radius: 20px;
+		border-radius: 20px;
+		// .map .card_pic
         @at-root .map & {
-            width: 387px;
+			width: 387px;
+			@include mw(M) {
+				width: 100%;
+			}
         }
         @include mw(M) {
             width: 100%;
@@ -640,7 +648,10 @@ h2 {
         // .card_txt_ul
         &_ul {
             > li + li {
-                margin-top: 23px;
+				margin-top: 23px;
+				@include mw(M) {
+					margin-top: 16px;
+				}
             }
         }
         // .card_txt .icon_keep
@@ -652,7 +663,7 @@ h2 {
             @include mw(M) {
                 flex: none;
                 position: relative;
-                margin-left: 24px;
+				margin-left: 24px;
             }
         }
     }
@@ -1293,7 +1304,11 @@ h2 {
 .sort {
 	@include d_f(inline-flex);
 	align-items: center;
-    color: #005f5f;
+	color: #005f5f;
+	@include mw(M) {
+		width: 100%;
+		margin-bottom: 16px;
+	}
     // .sort_li
     &_li {
 		padding: 4px;
