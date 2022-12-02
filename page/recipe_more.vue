@@ -9,10 +9,10 @@
             </div>
             <div class="recipe_more_pic">
                 <div class="main">
-                    <img src="../images/recipe/recipe1.jpg" alt="" />
+                    <img src="./images/recipe/recipe1.jpg" alt="" />
                 </div>
                 <div class="season">
-                    <img src="../images/spring.png" alt="" />
+                    <img src="./images/spring.png" alt="" />
                 </div>
             </div>
             <ul class="recipe_more_info">
@@ -48,13 +48,13 @@
             <ul class="recipe_list_ul">
                 <li class="recipe_list_li">
                     <div class="recipe_list_img">
-                        <img src="../images/recipe/recipe1_1.jpg" alt="" />
+                        <img src="./images/recipe/recipe1_1.jpg" alt="" />
                     </div>
                     <div class="recipe_list_txt">甜豆剝去纖維</div>
                 </li>
                 <li class="recipe_list_li">
                     <div class="recipe_list_img">
-                        <img src="../images/recipe/recipe1_2.jpg" alt="" />
+                        <img src="./images/recipe/recipe1_2.jpg" alt="" />
                     </div>
                     <div class="recipe_list_txt">木耳泡發後切小塊</div>
                 </li>

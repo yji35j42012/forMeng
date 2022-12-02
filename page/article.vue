@@ -5,7 +5,7 @@
         <div class="infoHead">
             <h1>素食地圖</h1>
             <div class="infoHead_pic">
-                <img src="../images/article/article_title.png" alt="" />
+                <img src="./images/article/article_title.png" alt="" />
             </div>
             <ul class="infoHead_tab">
                 <li class="infoHead_tab_li on">
@@ -38,7 +38,7 @@
             <div class="card_group">
                 <div class="card boxShadow" v-for="item in 2" :key="item">
                     <div class="card_pic">
-                        <img src="../images/recipe/recipe1.jpg" alt="" />
+                        <img src="./images/recipe/recipe1.jpg" alt="" />
                     </div>
                     <div class="card_txt">
                         <h2 data-txtby="by 史萊姆">

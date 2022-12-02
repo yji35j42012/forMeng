@@ -19,7 +19,7 @@
         <div class="car_group" v-if="show.check">
             <div class="car_item boxShadow" v-for="item in 5" :key="item">
                 <div class="car_item_pic">
-                    <img src="../images/course/course001-1.jpg" alt="" />
+                    <img src="./images/course/course001-1.jpg" alt="" />
                 </div>
                 <div class="car_item_info">
                     <div class="detail">
@@ -147,7 +147,7 @@
                     <input type="text" class="credit_input" />
                 </div>
                 <div class="pay_box_pic">
-                    <img src="../images/card.jpg" alt="" />
+                    <img src="./images/card.jpg" alt="" />
                 </div>
             </div>
         </div>

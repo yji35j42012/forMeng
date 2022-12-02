@@ -5,7 +5,7 @@
         <div class="infoHead">
             <h1>素食地圖</h1>
             <div class="infoHead_pic">
-                <img src="../images/map/map_title.png" alt="" />
+                <img src="./images/map/map_title.png" alt="" />
             </div>
             <div class="infoHead_filter">
                 <label class="normal_select msg_top" data-txtt="Step1">
@@ -32,7 +32,7 @@
             <div class="card_group">
                 <div class="card boxShadow">
                     <div class="card_pic">
-                        <img src="../images/map/map1.jpg" alt="" />
+                        <img src="./images/map/map1.jpg" alt="" />
                     </div>
                     <ul class="card_txt">
                         <h2>全國素食-大安復興店</h2>

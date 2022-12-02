@@ -7,14 +7,14 @@
 		<div class="infoHead">
 			<h1>廚藝教室</h1>
 			<div class="infoHead_pic">
-				<img src="../images/course/mascot_title.png" alt="" />
+				<img src="./images/course/mascot_title.png" alt="" />
 			</div>
 		</div>
 		<div class="infoBody">
 			<div class="card_group">
 				<div class="card boxShadow" v-for="(item, index) in 2" :key="index">
 					<div class="card_pic">
-						<img src="../images/course/course001-1.jpg" alt="" />
+						<img src="./images/course/course001-1.jpg" alt="" />
 					</div>
 					<div class="card_txt">
 						<h2>地瓜餅 (奶素)</h2>

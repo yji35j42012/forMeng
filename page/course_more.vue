@@ -5,17 +5,17 @@
         <div class="infoBody">
             <div class="more boxShadow">
                 <div class="more_titlePic">
-                    <img src="../images/course/course001-1.jpg" alt="" />
+                    <img src="./images/course/course001-1.jpg" alt="" />
                 </div>
                 <div class="more_info">
                     超級食物「地瓜」含有豐富的膳食纖維、β-胡蘿蔔素、鎂、鉀等營養素。是世界衛生組織評選出來「十大最佳蔬菜」的冠軍，地瓜含有脫氫表雄酮，可以預防乳腺癌和結腸癌，地瓜屬於抗性澱粉，不易在小腸吸收利用，高纖、低GI，因此非常適合減重朋友食用，製作成地瓜餅當早餐或點心都很適合，老少咸宜喔!
                 </div>
                 <ul class="more_infoPic">
                     <li>
-                        <img src="../images/course/course01.jpg" alt="" />
+                        <img src="./images/course/course01.jpg" alt="" />
                     </li>
                     <li>
-                        <img src="../images/course/course02.jpg" alt="" />
+                        <img src="./images/course/course02.jpg" alt="" />
                     </li>
                 </ul>
                 <div class="more_note">
@@ -45,7 +45,7 @@
                         <i class="icon_keep" v-html="icon_all.keep"></i>
                     </h2>
                     <div class="car_pic">
-                        <img src="../images/course/car01.png" alt="" />
+                        <img src="./images/course/car01.png" alt="" />
                     </div>
                     <label class="normal_select">
                         <select>
@@ -64,7 +64,7 @@
                     <button class="normal_btn">加入購物車</button>
                 </div>
                 <div class="car_titlePic">
-                    <img src="../images/course/mascot_title.png" alt="" />
+                    <img src="./images/course/mascot_title.png" alt="" />
                 </div>
             </div>
         </div>
