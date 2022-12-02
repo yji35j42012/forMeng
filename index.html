@@ -63,9 +63,15 @@
 			{
 				path: '/adm',
 				component: httpVueLoader("./page/adm.vue"),
+				children: [
+					{
+						path: "",
+						component: httpVueLoader(
+							"./page/member.vue"
+						),
+					},
+				]
 			},
-
-
 		]
 		const router = new VueRouter({
 			// mode: 'history',
