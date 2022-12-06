@@ -110,7 +110,8 @@
         padding-left: 0;
     }
     // .admInfo_title
-    &_title {
+    &_title,
+    &_title span {
         // @include d_f(flex, none, center);
         margin-bottom: 48px;
         font-family: "Inter";

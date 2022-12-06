@@ -6,14 +6,10 @@
         @include mw(M) {
             flex-direction: column;
         }
-        h1{
-            display: none;
-            @include mw(S) {
-                display: block;
-            }
-        }
+    }
+    .infoBody {
         // .infoHead_filter
-        &_filter{
+        &_filter {
             @include mw(S) {
                 flex-direction: column;
             }

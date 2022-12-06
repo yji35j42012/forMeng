@@ -10,7 +10,12 @@
 						<div class="car_pic">
 							<img src="./images/spring.png" alt="" />
 							<map name="ImageMap03">
-								<area shape="polygon" coords="34,44,270,350" href="#" alt="">
+								<area
+									shape="polygon"
+									coords="34,44,270,350"
+									href="#"
+									alt=""
+								/>
 							</map>
 						</div>
 						<h2 class="car_title">
@@ -22,7 +27,9 @@
 			<div class="infoHead_pic">
 				<img src="./images/recipe.png" alt="" />
 			</div>
-			<div class="infoHead_filter">
+		</div>
+		<div class="infoBody">
+			<div class="infoBody_filter">
 				<div class="normal_search">
 					<input type="text" placeholder="搜尋食譜" />
 					<button class="normal_search_btn">
@@ -54,8 +61,6 @@
 					<i v-html="icon_all.select_arr"></i>
 				</label>
 			</div>
-		</div>
-		<div class="infoBody">
 			<div class="card_group">
 				<div class="card boxShadow" v-for="item in 2" :key="item">
 					<div class="card_pic">

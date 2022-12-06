@@ -3,26 +3,21 @@
     .infoHead {
         flex-wrap: wrap;
         margin-bottom: 50px;
-        h1 {
-            display: none;
-            @include mw(S) {
-                display: block;
-            }
-        }
-        // .infoHead_filter
-        &_filter{
-            .normal_btn{
-                @include d_f(inline-flex,center,center);
+    }
+    .infoBody {
+        // .infoBody_filter
+        &_filter {
+            .normal_btn {
+                @include d_f(inline-flex, center, center);
                 margin-left: auto;
                 padding: 12px;
             }
         }
         // .icon_pen
-        .icon_pen{
+        .icon_pen {
             width: 13px;
             height: 13px;
             margin-right: 7px;
         }
     }
-    
 }
