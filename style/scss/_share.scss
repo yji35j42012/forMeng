@@ -39,10 +39,10 @@ h2 {
     &._white {
         background-color: #fff6e9;
         color: #005f5f;
-	}
-	&._submitEdit{
-		margin: 48px auto 0;
-	}
+    }
+    &._submitEdit {
+        margin: 48px auto 0;
+    }
 }
 .normal_search {
     overflow: hidden;
@@ -74,19 +74,19 @@ h2 {
     height: 36px;
     @at-root .adm & {
         @include d_f(inline-flex, none, center);
-		width: 95px;
-		@include mw(XS){
-			width: 50px;
-		}
+        width: 95px;
+        @include mw(XS) {
+            width: 50px;
+        }
         &.msg_right:after {
             font-size: 16px;
-		}
-		&+.normal_select {
-			margin-left: 30px;
-			@include mw(XS){
-				margin-left: 0;
-			}
-		}
+        }
+        & + .normal_select {
+            margin-left: 30px;
+            @include mw(XS) {
+                margin-left: 0;
+            }
+        }
     }
     select {
         width: 100%;
@@ -102,10 +102,10 @@ h2 {
         @extend %hand;
 
         &:disabled {
-			padding-left: 0;
-			border: none;
-			color: #000000;
-			opacity: 1;
+            padding-left: 0;
+            border: none;
+            color: #000000;
+            opacity: 1;
             & + i {
                 display: none;
             }
@@ -1164,7 +1164,6 @@ h2 {
     // .car_func
     &_func {
         margin-top: 48px;
-
         .normal_btn + .normal_btn {
             margin-left: 16px;
         }
@@ -1305,7 +1304,6 @@ h2 {
         // .pay_box_ul
         &_ul {
             @include d_f(flex, space-between, center);
-
             & + .pay_box_title {
                 margin-top: 24px;
             }
@@ -1405,7 +1403,6 @@ h2 {
         &_radio {
             @include d_f(inline-flex, center);
             flex-wrap: wrap;
-
             @include mw(S) {
                 flex-direction: column;
             }
@@ -1449,7 +1446,6 @@ h2 {
         }
     }
 }
-
 .sort {
     @include d_f(inline-flex);
     align-items: center;
@@ -1482,8 +1478,8 @@ h2 {
         @include mw(M) {
             padding: 15px;
             font-size: 18px;
-		}
-		@include mw(XS) {
+        }
+        @include mw(XS) {
             padding: 1px;
             font-size: 14px;
         }
@@ -1559,20 +1555,19 @@ h2 {
     border-bottom: 1px solid #000;
     &:disabled {
         border: none;
-	}
-	@include mw(XS){
-		font-size: 14px;
-	}
+    }
+    @include mw(XS) {
+        font-size: 14px;
+    }
 }
-
 .showEdit {
     .normal_radio {
         display: inline-flex;
         & + .normal_radio {
-			margin-left: 50px;
-			@include mw(XS){
-				margin-left: 20px;
-			}
+            margin-left: 50px;
+            @include mw(XS) {
+                margin-left: 20px;
+            }
         }
     }
 }
