@@ -1,320 +1,320 @@
 .recipe {
-    // .recipe_more
-    &_more {
-        padding: 36px 75px;
-        @include mw(M) {
-            padding: 24px 20px;
-        }
-        @include mw(S) {
-            padding: 24px 15px;
-        }
-        // .recipe_more_title
-        &_title {
-            @include d_f(flex, space-between, center);
-            margin-bottom: 32px;
-            font-weight: 700;
-            font-size: 30px;
-            line-height: 36px;
-            color: #333333;
-            @include mw(S) {
-                display: block;
-                margin-bottom: 24px;
-                .icon_keep {
-                    margin-top: 33px;
-                }
-            }
-        }
-        // .recipe_more_pic
-        &_pic {
-            @include d_f(flex);
-            margin-bottom: 36px;
-            @include mw(S) {
-                display: block;
-            }
-            .main {
-                width: 100%;
-            }
-            .season {
-                flex: 0 0 150px;
-                margin-left: 30px;
-                @include mw(S) {
-                    max-width: 150px;
-                    margin: 24px auto;
-                }
-            }
-        }
-        // .recipe_more_info
-        &_info {
-            li {
-                font-family: "Inter";
-                font-style: normal;
-                font-weight: 600;
-                font-size: 20px;
-                line-height: 160%;
-            }
-            li + li {
-                margin-top: 20px;
-            }
-        }
-    }
-    // .recipe_detail
-    &_detail {
-        margin-top: 48px;
-        padding: 36px 75px;
-        @include mw(M) {
-            padding: 24px 20px;
-        }
-        @include mw(S) {
-            padding: 24px 15px;
-        }
-        // .recipe_detail_ul
-        &_ul {
-            @include d_f(flex);
-            flex-wrap: wrap;
-            width: 100%;
-            text-align: center;
-            @include mw(S) {
-                display: block;
-            }
-            li {
-                width: 100%;
-                text-align: left;
-                padding: 13px 0;
-                font-weight: 600;
-                font-size: 20px;
-                line-height: 160%;
-                color: #333333;
-                @include mw(S) {
-                    padding: 10px 0;
-                }
-                &:not(.ingredients) {
-                    width: 50%;
-                    text-align: center;
-                    &::before {
-                        content: attr(data-txt);
-                        display: block;
-                    }
-                    @include mw(S) {
-                        @include d_f(flex, space-between);
-                        width: 100%;
-                    }
-                }
-                &.ingredients ~ li {
-                    @include d_f(flex, space-between);
+	// .recipe_more
+	&_more {
+		padding: 36px 75px;
+		@include mw(M) {
+			padding: 24px 20px;
+		}
+		@include mw(S) {
+			padding: 24px 15px;
+		}
+		// .recipe_more_title
+		&_title {
+			@include d_f(flex, space-between, center);
+			margin-bottom: 32px;
+			font-weight: 700;
+			font-size: 30px;
+			line-height: 36px;
+			color: #333333;
+			@include mw(S) {
+				display: block;
+				margin-bottom: 24px;
+				.icon_keep {
+					margin-top: 33px;
+				}
+			}
+		}
+		// .recipe_more_pic
+		&_pic {
+			@include d_f(flex);
+			margin-bottom: 36px;
+			@include mw(S) {
+				display: block;
+			}
+			.main {
+				width: 100%;
+			}
+			.season {
+				flex: 0 0 150px;
+				margin-left: 30px;
+				@include mw(S) {
+					max-width: 150px;
+					margin: 24px auto;
+				}
+			}
+		}
+		// .recipe_more_info
+		&_info {
+			li {
+				font-family: "Inter";
+				font-style: normal;
+				font-weight: 600;
+				font-size: 20px;
+				line-height: 160%;
+			}
+			li + li {
+				margin-top: 20px;
+			}
+		}
+	}
+	// .recipe_detail
+	&_detail {
+		margin-top: 48px;
+		padding: 36px 75px;
+		@include mw(M) {
+			padding: 24px 20px;
+		}
+		@include mw(S) {
+			padding: 24px 15px;
+		}
+		// .recipe_detail_ul
+		&_ul {
+			@include d_f(flex);
+			flex-wrap: wrap;
+			width: 100%;
+			text-align: center;
+			@include mw(S) {
+				display: block;
+			}
+			li {
+				width: 100%;
+				text-align: left;
+				padding: 13px 0;
+				font-weight: 600;
+				font-size: 20px;
+				line-height: 160%;
+				color: #333333;
+				@include mw(S) {
+					padding: 10px 0;
+				}
+				&:not(.ingredients) {
+					width: 50%;
+					text-align: center;
+					&::before {
+						content: attr(data-txt);
+						display: block;
+					}
+					@include mw(S) {
+						@include d_f(flex, space-between);
+						width: 100%;
+					}
+				}
+				&.ingredients ~ li {
+					@include d_f(flex, space-between);
 
-                    &:nth-child(odd) {
-                        padding-left: 45px;
-                        @include mw(S) {
-                            padding-left: 0;
-                        }
-                    }
-                    &:nth-child(even) {
-                        padding-right: 45px;
-                        @include mw(S) {
-                            padding-right: 0;
-                        }
-                    }
-                }
-                &:nth-child(1),
-                &:nth-child(2),
-                &:nth-child(3) {
-                    border-bottom: 1px solid #333333;
-                }
-                &:nth-child(2) {
-                    border-left: 1px solid #333333;
-                    @include mw(S) {
-                        border-left: none;
-                    }
-                }
-            }
-        }
+					&:nth-child(odd) {
+						padding-left: 45px;
+						@include mw(S) {
+							padding-left: 0;
+						}
+					}
+					&:nth-child(even) {
+						padding-right: 45px;
+						@include mw(S) {
+							padding-right: 0;
+						}
+					}
+				}
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3) {
+					border-bottom: 1px solid #333333;
+				}
+				&:nth-child(2) {
+					border-left: 1px solid #333333;
+					@include mw(S) {
+						border-left: none;
+					}
+				}
+			}
+		}
 
-        & + .recipe_list {
-            margin-top: 48px;
-        }
-    }
-    // .recipe .infoHead
-    .infoHead {
-        flex-wrap: wrap;
-        margin-bottom: 50px;
-        text-align: center;
-        @include mw(M) {
-            flex-direction: column;
-            margin-bottom: 48px;
-        }
-        &_pic {
-            width: 100%;
-            max-width: calc(830px - 32px);
-            margin-left: 32px;
-            @include mw(XL) {
-                max-width: 650px;
-                margin-left: 20px;
-            }
-            @include mw(M) {
-                margin-left: 0;
-                margin-top: 48px;
-            }
-        }
-    }
+		& + .recipe_list {
+			margin-top: 48px;
+		}
+	}
+	// .recipe .infoHead
+	.infoHead {
+		flex-wrap: wrap;
+		margin-bottom: 50px;
+		text-align: center;
+		@include mw(M) {
+			flex-direction: column;
+			margin-bottom: 48px;
+		}
+		&_pic {
+			width: 100%;
+			max-width: calc(830px - 32px);
+			margin-left: 32px;
+			@include mw(XL) {
+				max-width: 650px;
+				margin-left: 20px;
+			}
+			@include mw(M) {
+				margin-left: 0;
+				margin-top: 48px;
+			}
+		}
+	}
 
-    // .recipe_list
-    &_list {
-        &.boxShadow {
-            padding: 24px 75px;
-            @include mw(M) {
-                padding: 24px 20px;
-            }
-            @include mw(S) {
-                padding: 24px 15px;
-            }
-        }
-        // recipe_list_li
-        &_li {
-            @include d_f(flex);
-            padding: 36px 0;
-            counter-increment: section;
-            @include mw(S) {
-                display: block;
-            }
-            & + & {
-                border-top: 1px solid #333333;
-            }
-        }
-        // recipe_list_img
-        &_img {
-            max-width: 450px;
-            margin-right: 32px;
-            @include mw(S) {
-                max-width: unset;
-                margin-right: 0;
-            }
-        }
-        // .recipe_list_txt
-        &_txt {
-            font-family: "Inter";
-            font-style: normal;
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 29px;
-            color: #333333;
-            @include mw(S) {
-                margin-top: 24px;
-            }
-            &::before {
-                content: attr(data-txt) counter(section);
-                display: block;
-                margin-bottom: 16px;
-                font-family: "Inter";
-                font-style: normal;
-                font-weight: 700;
-                font-size: 30px;
-                line-height: 36px;
-            }
-        }
-        & + .recipe_message {
-            margin-top: 48px;
-        }
-    }
+	// .recipe_list
+	&_list {
+		&.boxShadow {
+			padding: 24px 75px;
+			@include mw(M) {
+				padding: 24px 20px;
+			}
+			@include mw(S) {
+				padding: 24px 15px;
+			}
+		}
+		// recipe_list_li
+		&_li {
+			@include d_f(flex);
+			padding: 36px 0;
+			counter-increment: section;
+			@include mw(S) {
+				display: block;
+			}
+			& + & {
+				border-top: 1px solid #333333;
+			}
+		}
+		// recipe_list_img
+		&_img {
+			max-width: 450px;
+			margin-right: 32px;
+			@include mw(S) {
+				max-width: unset;
+				margin-right: 0;
+			}
+		}
+		// .recipe_list_txt
+		&_txt {
+			font-family: "Inter";
+			font-style: normal;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 29px;
+			color: #333333;
+			@include mw(S) {
+				margin-top: 24px;
+			}
+			&::before {
+				content: attr(data-txt) counter(section);
+				display: block;
+				margin-bottom: 16px;
+				font-family: "Inter";
+				font-style: normal;
+				font-weight: 700;
+				font-size: 30px;
+				line-height: 36px;
+			}
+		}
+		& + .recipe_message {
+			margin-top: 48px;
+		}
+	}
 
-    // .recipe_message
-    &_message {
-        @include d_f(flex);
-        flex-wrap: wrap;
-        &.boxShadow {
-            padding: 36px 75px;
-            @include mw(M) {
-                padding: 24px 20px;
-            }
-            @include mw(S) {
-                padding: 24px 15px;
-            }
-        }
-        //.recipe_message_title
-        &_title {
-            width: 100%;
-            padding-left: 32px;
-            padding-bottom: 16px;
-            font-family: "Inter";
-            font-style: normal;
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 29px;
-            border-bottom: 1px solid #333333;
-            @include mw(S) {
-                padding-left: 0;
-            }
-        }
-        // .recipe_message_img
-        &_img {
-            @include d_f(flex, center, center);
-            flex: none;
-            width: 100px;
-            height: 100px;
-            margin-top: 36px;
-            margin-right: 44px;
-            background: #eeeeee;
-            border-radius: 50%;
-            @include mw(S) {
-                margin: 24px auto 0;
-            }
-        }
-        //.recipe_message_txt{
-        &_txt {
-            flex: 0 0 calc(100% - 100px - 44px);
-            margin-top: 36px;
-            background-color: #fffcf7;
-            border: 1px solid #333333;
-            @include mw(S) {
-                flex: 0 0 100%;
-                margin-top: 32px;
-                border-radius: 8px;
-            }
-            textarea {
-                width: 100%;
-                padding: 24px;
-                font-family: "Inter";
-                font-style: normal;
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 19px;
-                color: #333333;
-            }
-        }
-        //.recipe_message_btnBox
-        &_btnBox {
-            width: 100%;
-            margin-top: 32px;
-            text-align: right;
-            @include mw(S) {
-                text-align: center;
-            }
-        }
-    }
+	// .recipe_message
+	&_message {
+		@include d_f(flex);
+		flex-wrap: wrap;
+		&.boxShadow {
+			padding: 36px 75px;
+			@include mw(M) {
+				padding: 24px 20px;
+			}
+			@include mw(S) {
+				padding: 24px 15px;
+			}
+		}
+		//.recipe_message_title
+		&_title {
+			width: 100%;
+			padding-left: 32px;
+			padding-bottom: 16px;
+			font-family: "Inter";
+			font-style: normal;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 29px;
+			border-bottom: 1px solid #333333;
+			@include mw(S) {
+				padding-left: 0;
+			}
+		}
+		// .recipe_message_img
+		&_img {
+			@include d_f(flex, center, center);
+			flex: none;
+			width: 100px;
+			height: 100px;
+			margin-top: 36px;
+			margin-right: 44px;
+			background: #eeeeee;
+			border-radius: 50%;
+			@include mw(S) {
+				margin: 24px auto 0;
+			}
+		}
+		//.recipe_message_txt{
+		&_txt {
+			flex: 0 0 calc(100% - 100px - 44px);
+			margin-top: 36px;
+			background-color: #fffcf7;
+			border: 1px solid #333333;
+			@include mw(S) {
+				flex: 0 0 100%;
+				margin-top: 32px;
+				border-radius: 8px;
+			}
+			textarea {
+				width: 100%;
+				padding: 24px;
+				font-family: "Inter";
+				font-style: normal;
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 19px;
+				color: #333333;
+			}
+		}
+		//.recipe_message_btnBox
+		&_btnBox {
+			width: 100%;
+			margin-top: 32px;
+			text-align: right;
+			@include mw(S) {
+				text-align: center;
+			}
+		}
+	}
 
-    .car {
-        max-width: 280px;
-        margin-left: 0;
+	.car {
+		max-width: 280px;
+		margin-left: 0;
 
-        &_box {
-            padding: 32px 24px;
-            @include mw(M) {
-                @include d_f(flex, none, center);
-                padding: 16px;
-            }
-        }
-        &_pic {
-            @include mw(M) {
-                flex: none;
-                width: 100px;
-                margin-bottom: 0;
-            }
-        }
-        &_title {
-            white-space: unset;
-            @include mw(M) {
-                margin-bottom: 0;
-                margin-left: 16px;
-            }
-        }
-    }
+		&_box {
+			padding: 32px 24px;
+			@include mw(M) {
+				@include d_f(flex, none, center);
+				padding: 16px;
+			}
+		}
+		&_pic {
+			@include mw(M) {
+				flex: none;
+				width: 100px;
+				margin-bottom: 0;
+			}
+		}
+		&_title {
+			white-space: unset;
+			@include mw(M) {
+				margin-bottom: 0;
+				margin-left: 16px;
+			}
+		}
+	}
 }
