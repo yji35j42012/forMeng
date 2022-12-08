@@ -1,140 +1,140 @@
 .admNav {
-	width: 100%;
-	max-width: 190px;
-	@include mw(M) {
-		max-width: 150px;
-	}
-	@include mw(S) {
-		max-width: unset;
-		text-align: center;
-	}
-	// .admNav_pic
-	&_pic {
-		position: relative;
-		width: 150px;
-		height: 150px;
-		margin: auto;
-		background-color: #fff;
-		&:after {
-			content: attr(data-txt);
-			position: absolute;
-			top: calc(100% + 12px);
-			left: 0;
-			right: 0;
-			text-align: center;
-			font-family: "Inter";
-			font-style: normal;
-			font-weight: 500;
-			font-size: 14px;
-			letter-spacing: 0.1em;
-			color: #005f5f;
-		}
-	}
-	// .admNav_share
-	&_share {
-		width: 100%;
-		margin-top: 124px;
-		font-family: "Inter";
-		font-style: normal;
-		font-weight: 600;
-		font-size: 20px;
-		line-height: 160%;
-		text-align: center;
-		color: #005f5f;
-		@include mw(S) {
-			margin-top: 70px;
-		}
-		& + .admNav_ul {
-			margin-top: 48px;
-		}
-	}
+    width: 100%;
+    max-width: 190px;
+    @include mw(M) {
+        max-width: 150px;
+    }
+    @include mw(S) {
+        max-width: unset;
+        text-align: center;
+    }
+    // .admNav_pic
+    &_pic {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        margin: auto;
+        background-color: #fff;
+        &:after {
+            content: attr(data-txt);
+            position: absolute;
+            top: calc(100% + 12px);
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.1em;
+            color: #005f5f;
+        }
+    }
+    // .admNav_share
+    &_share {
+        width: 100%;
+        margin-top: 124px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 160%;
+        text-align: center;
+        color: #005f5f;
+        @include mw(S) {
+            margin-top: 70px;
+        }
+        & + .admNav_ul {
+            margin-top: 48px;
+        }
+    }
 
-	// .admNav_ul
-	&_ul {
-		overflow: hidden;
-		width: 100%;
-		padding: 0;
-		@include mw(S) {
-			@include d_f(inline-flex);
-			width: auto;
-			margin: auto;
-		}
-		@include mw(XS) {
-			max-width: 320px;
-		}
-	}
-	// .admNav_li
-	&_li {
-		padding: 32px 0;
-		font-family: "Inter";
-		font-style: normal;
-		font-weight: 600;
-		font-size: 20px;
-		text-align: center;
-		color: #333333;
-		@extend %hand;
-		@include mw(M) {
-			padding: 24px 0;
-		}
-		@include mw(S) {
-			padding: 24px;
-		}
-		@include mw(XS) {
-			@include d_f(flex,center,center);
-			width: calc(100% / 4);
-			padding: 12px 10px;
-		}
-		&.on {
-			background-color: #005f5f;
-			color: #fff6e9;
-		}
-		& + & {
-			border-top: 1px solid #333333;
-			@include mw(S) {
-				border-top: none;
-				border-left: 1px solid #333333;
-			}
-		}
-	}
+    // .admNav_ul
+    &_ul {
+        overflow: hidden;
+        width: 100%;
+        padding: 0;
+        @include mw(S) {
+            @include d_f(inline-flex);
+            width: auto;
+            margin: auto;
+        }
+        @include mw(XS) {
+            max-width: 320px;
+        }
+    }
+    // .admNav_li
+    &_li {
+        padding: 32px 0;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        text-align: center;
+        color: #333333;
+        @extend %hand;
+        @include mw(M) {
+            padding: 24px 0;
+        }
+        @include mw(S) {
+            padding: 24px;
+        }
+        @include mw(XS) {
+            @include d_f(flex, center, center);
+            width: calc(100% / 4);
+            padding: 12px 10px;
+        }
+        &.on {
+            background-color: #005f5f;
+            color: #fff6e9;
+        }
+        & + & {
+            border-top: 1px solid #333333;
+            @include mw(S) {
+                border-top: none;
+                border-left: 1px solid #333333;
+            }
+        }
+    }
 }
 
 .admInfo {
-	@include d_f(flex, none, flex-start);
-	flex-wrap: wrap;
-	width: 100%;
-	padding-left: 48px;
-	@include mw(S) {
-		align-items: center;
-		flex-direction: column;
-		padding-top: 48px;
-		padding-left: 0;
-	}
-	// .admInfo_title
-	&_title,
-	&_title span {
-		// @include d_f(flex, none, center);
-		margin-bottom: 48px;
-		font-family: "Inter";
-		font-style: normal;
-		font-weight: 700;
-		font-size: 30px;
-		line-height: 36px;
-		color: #005f5f;
-	}
-	// .admInfo_body
-	&_body {
-		width: 100%;
-		@include mw(S) {
-			padding: 24px 10px;
-		}
-	}
-	.normal_btn {
-		margin-left: auto;
-		padding: 14px 17px;
-		@include mw(S) {
-			order: 1;
-			margin-left: 0;
-			margin-top: 48px;
-		}
-	}
+    @include d_f(flex, none, flex-start);
+    flex-wrap: wrap;
+    width: 100%;
+    padding-left: 48px;
+    @include mw(S) {
+        align-items: center;
+        flex-direction: column;
+        padding-top: 48px;
+        padding-left: 0;
+    }
+    // .admInfo_title
+    &_title,
+    &_title span {
+        // @include d_f(flex, none, center);
+        margin-bottom: 48px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+        color: #005f5f;
+    }
+    // .admInfo_body
+    &_body {
+        width: 100%;
+        @include mw(S) {
+            padding: 24px 10px;
+        }
+    }
+    .normal_btn {
+        margin-left: auto;
+        padding: 14px 17px;
+        @include mw(S) {
+            order: 1;
+            margin-left: 0;
+            margin-top: 48px;
+        }
+    }
 }
