@@ -128,7 +128,6 @@
 				}
 			}
 		}
-
 		& + .recipe_list {
 			margin-top: 48px;
 		}
@@ -156,7 +155,6 @@
 			}
 		}
 	}
-
 	// .recipe_list
 	&_list {
 		&.boxShadow {
@@ -215,7 +213,6 @@
 			margin-top: 48px;
 		}
 	}
-
 	// .recipe_message
 	&_message {
 		@include d_f(flex);
@@ -290,11 +287,9 @@
 			}
 		}
 	}
-
 	.car {
 		max-width: 280px;
 		margin-left: 0;
-
 		&_box {
 			padding: 32px 24px;
 			@include mw(M) {
