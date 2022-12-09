@@ -1146,6 +1146,17 @@ h2 {
   width: 100%;
 }
 
+.adm .pageTab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
 .pageTab + .infoBody_filter,
 .pageTab + .card_group {
   margin-top: 48px;
@@ -1160,6 +1171,32 @@ h2 {
   padding: 12px 30px;
 }
 
+@media screen and (max-width: 1280px) {
+  .adm .pageTab_li .normal_btn {
+    padding: 12px 15px;
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .adm .pageTab_li .normal_btn {
+    padding: 12px;
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .adm .pageTab_li .normal_btn {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .adm .pageTab_li .normal_btn {
+    font-size: 16px;
+    padding: 6px;
+  }
+}
+
 .pageTab_li:not(.on) > .normal_btn {
   background-color: #fff6e9;
   color: #005f5f;
@@ -1171,6 +1208,12 @@ h2 {
 
 .adm .pageTab_li + .pageTab_li {
   margin-left: 20px;
+}
+
+@media screen and (max-width: 995px) {
+  .adm .pageTab_li + .pageTab_li {
+    margin-left: 10px;
+  }
 }
 
 .card {
@@ -3309,13 +3352,13 @@ h2 {
   }
 }
 
-.admInfo .normal_btn {
+.admInfo .normal_btn._member {
   margin-left: auto;
   padding: 14px 17px;
 }
 
 @media screen and (max-width: 767px) {
-  .admInfo .normal_btn {
+  .admInfo .normal_btn._member {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;

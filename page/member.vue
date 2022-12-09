@@ -8,7 +8,7 @@
 		</div>
 		<button
 			v-if="!isEdit"
-			class="normal_btn"
+			class="normal_btn _member"
 			@click="editMemberHandler('edit')"
 		>
 			<i class="icon_pen" v-html="icon_all.pen"></i>
