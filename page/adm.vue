@@ -69,9 +69,6 @@ module.exports = {
 					break;
 			}
 		}
-		console.log("nowPage", nowPage);
-
-		// console.log(store.state.nowPage);
 	},
 
 	computed: {},
