@@ -1,0 +1,51 @@
+.home {
+    // .home_title
+    &_title {
+        // max-width: 983px;
+        margin: auto;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 55px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        color: #333333;
+        white-space: pre-line;
+    }
+    // .home_detail
+    &_detail {
+        margin-top: 200px;
+        // .home_detail_list
+        &_list {
+            @include d_f(flex, center);
+            & + & {
+                margin-top: 150px;
+            }
+            .pic {
+                @include d_f(flex, center, center);
+                width: 600px;
+                height: 600px;
+                border-radius: 100%;
+                background-color: #fff6e9;
+                box-shadow: 4px 4px 0px #333333;
+                img {
+                    width: 420px;
+                }
+            }
+            .step {
+                // .step_num
+                &_num {
+                    position: relative;
+                    font-family: "Inter";
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 128px;
+                    color: #f2ad31;
+
+                    // text-shadow: 0 0 5px #333333;
+                }
+            }
+        }
+    }
+}

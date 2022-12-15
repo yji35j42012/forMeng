@@ -11,9 +11,9 @@
 
 <body>
 
-	<div id="app" class="wrap">
+	<div id="app" :class="['wrap' , nowPage]">
 		<htitle></htitle>
-		<div :class="['content' , nowPage]">
+		<div class="content">
 			<router-view></router-view>
 		</div>
 		<div class="footer">

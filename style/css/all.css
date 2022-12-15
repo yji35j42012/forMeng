@@ -675,6 +675,20 @@ h2 {
   min-height: 100%;
 }
 
+.wrap.home {
+  position: relative;
+  padding: 0;
+  background-color: #6dd0cd;
+}
+
+.wrap.home::before {
+  content: "";
+  display: block;
+  width: 100%;
+  min-height: 100%;
+  background: url("../../images/home_bg.png") no-repeat center/cover;
+}
+
 .content {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 100%;
@@ -686,20 +700,6 @@ h2 {
   .content {
     padding: 129px 15px 48px;
   }
-}
-
-.content.home {
-  position: relative;
-  padding: 0;
-  background-color: #6dd0cd;
-}
-
-.content.home::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: url("../../images/home_bg.png") no-repeat center/cover;
 }
 
 .container {
@@ -770,6 +770,11 @@ h2 {
             box-shadow: 4px 4px 0 #333;
     pointer-events: auto;
   }
+}
+
+.home .header {
+  position: absolute;
+  top: 100%;
 }
 
 .header .logo_pc {
@@ -3379,5 +3384,69 @@ h2 {
     margin-left: 0;
     margin-top: 48px;
   }
+}
+
+.home_title {
+  margin: auto;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 55px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #333333;
+  white-space: pre-line;
+}
+
+.home_detail {
+  margin-top: 200px;
+}
+
+.home_detail_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.home_detail_list + .home_detail_list {
+  margin-top: 150px;
+}
+
+.home_detail_list .pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 600px;
+  height: 600px;
+  border-radius: 100%;
+  background-color: #fff6e9;
+  -webkit-box-shadow: 4px 4px 0px #333333;
+          box-shadow: 4px 4px 0px #333333;
+}
+
+.home_detail_list .pic img {
+  width: 420px;
+}
+
+.home_detail_list .step_num {
+  position: relative;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 128px;
+  color: #f2ad31;
 }
 /*# sourceMappingURL=all.css.map */
