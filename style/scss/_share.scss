@@ -268,9 +268,6 @@ h2 {
         @include mw(M) {
             @include d_f(flex, center, center);
             flex-direction: column;
-
-            // width: 50px;
-            // height: 50px;
         }
         span {
             @include mw(M) {
@@ -344,7 +341,6 @@ h2 {
     border: 2px solid #333333;
     box-shadow: 4px 4px 0px #333333;
     border-radius: 20px;
-
     &._list {
         overflow: hidden;
         padding: 0;
@@ -421,7 +417,6 @@ h2 {
         padding: 0 0 0 12px;
         box-shadow: 4px 4px 0 #333;
         pointer-events: auto;
-        // filter: drop-shadow(4px 4px 0px #333333);
     }
     @at-root .home & {
         position: absolute;
@@ -455,7 +450,6 @@ h2 {
         border: none;
         border-radius: 0;
         transform: translateX(100%);
-        // display: none;
     }
     // .menu_item
     &_item {
@@ -575,17 +569,6 @@ h2 {
         & + .infoBody_tab {
             margin-top: 48px;
         }
-        // @at-root .map & {
-        //     margin-left: 0;
-        //     @include mw(S) {
-        //         order: -1;
-        //     }
-        // }
-        // @at-root .article & {
-        //     @include mw(S) {
-        //         order: -1;
-        //     }
-        // }
     }
     // .course .infoHead
     @at-root .course & {
@@ -612,7 +595,6 @@ h2 {
             flex-direction: column;
         }
     }
-
     // .infoBody_filter
     &_filter {
         @include d_f(flex, center, center);
@@ -672,7 +654,6 @@ h2 {
         @include d_f(flex, space-around);
     }
     width: 100%;
-
     & + .infoBody_filter,
     & + .card_group {
         margin-top: 48px;
@@ -700,7 +681,6 @@ h2 {
                 }
             }
         }
-
         &:not(.on) > .normal_btn {
             background-color: #fff6e9;
             color: #005f5f;
@@ -812,8 +792,6 @@ h2 {
         p {
             font-weight: 600;
             font-size: 16px;
-            // line-height: 130.02%;
-            // letter-spacing: 0.1em;
             color: #333333;
 
             &.border {
@@ -942,7 +920,6 @@ h2 {
         flex-direction: column;
         &_title {
             position: relative;
-            // border-bottom: 2px solid #005f5f;
             font-style: normal;
             font-weight: 700;
             font-size: 16px;
